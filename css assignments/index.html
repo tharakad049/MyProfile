@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 1</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+        body>section{
+            border: 1px solid red;
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+        }
+        body>section:nth-child(1){
+            background: red;
+            left: 0;
+            top: 0;
+        }
+        body>section:nth-child(2){
+            background: green;
+            right: 0;
+            top: 0;
+        }
+        body>section:nth-child(3){
+            background: orange;
+            left: 0;
+            bottom: 0;
+        }
+        body>section:nth-child(4){
+            background: deeppink;
+            right: 0;
+            bottom: 0;
+        }
+
+        body>div{
+            border: 1px solid white;
+            background-color: white;
+            width: 150px;
+            height: 150px;
+/*            z-index: 10;*/
+            position: absolute;
+        }
+
+        body>div:nth-child(5){
+            left: 0;
+            top: 0;
+            border-bottom-right-radius: 100%;
+        }
+
+        body>div:nth-child(6){
+            right: 0;
+            top: 0;
+            border-bottom-left-radius: 100%;
+        }
+
+        body>div:nth-child(7){
+            left: 0;
+            bottom: 0;
+            border-top-right-radius: 100%;
+        }
+
+        body>div:nth-child(8){
+            right: 0;
+            bottom: 0;
+            border-top-left-radius: 100%;
+        }
+
+        body>div:nth-child(9){
+            width: 250px;
+            height: 250px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            margin: auto;
+        }
+
+        body>div>div{
+            background-color: red;
+            width: 150px;
+            height: 150px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            margin: auto;
+/*            border-bottom-right-radius: 100%;
+            border-bottom-left-radius: 100%;
+            border-top-right-radius: 100%;
+            border-top-left-radius: 100%;*/
+            border-radius: 100%;
+        }
+
+        body>div:nth-child(10){
+            left: 0;
+            right: 0;
+            top: -70px;
+            margin: auto;
+            border-bottom-right-radius: 100%;
+            border-bottom-left-radius: 100%
+        }
+
+        body>div:nth-child(11){
+            left: 0;
+            right: 0;
+            bottom: -70px;
+            margin: auto;
+            border-top-right-radius: 100%;
+            border-top-left-radius: 100%;
+        }
+        body>section:nth-child(1)>div{
+            background-color: white;
+            width: 250px;
+            height: 250px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            margin: auto;
+            border-radius: 100%;
+        }
+        body>section:nth-child(2)>div{
+            background-color: white;
+            width: 250px;
+            height: 250px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            margin: auto;
+            border-radius: 100%;
+        }
+        body>section:nth-child(3)>div{
+            background-color: white;
+            width: 250px;
+            height: 250px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            margin: auto;
+            border-radius: 100%;
+        }
+        body>section:nth-child(4)>div{
+            background-color: white;
+            width: 250px;
+            height: 250px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            margin: auto;
+            border-radius: 100%;
+        }
+
+        body>section:nth-child(1)>div>div{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            margin: auto;
+        }
+        body>section:nth-child(2)>div>div{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            margin: auto;
+        }
+        body>section:nth-child(3)>div>div{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            margin: auto;
+        }
+        body>section:nth-child(4)>div>div{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<section>
+    <div>
+        <div></div>
+    </div>
+</section>
+<section>
+    <div>
+        <div></div>
+    </div>
+</section>
+<section>
+    <div>
+        <div></div>
+    </div>
+</section>
+<section>
+    <div>
+        <div></div>
+    </div>
+</section>
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+<div>
+    <div></div>
+</div>
+
+<div></div>
+<div></div>
+
+</body>
+</html>
