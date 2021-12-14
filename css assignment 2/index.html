@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple web layout</title>
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body > header {
+            /* border: 1px solid red;*/
+            position: relative;
+            box-shadow: -2px -4px 5px 9px #b7b4b4;
+        }
+
+        body > header > img {
+            margin: 2px;
+            width: 250px;
+            height: 50px;
+        }
+
+        body > header > ul {
+            position: absolute;
+            right: 30px;
+            top: -10px;
+            list-style: none;
+        }
+
+        body > header > ul > li {
+            display: inline-block;
+            font-size: 30px;
+            font-family: 'Playfair Display', serif;
+            padding: 0px 10px 0px 10px;
+
+        }
+
+        body > header > ul > li:hover {
+            cursor: pointer;
+            color: red;
+        }
+        body>main>nav{
+            position: absolute;
+            width: 250px;
+            top: 0;
+            bottom: 0;
+            background: red;
+            margin: auto;
+        }
+
+        body>main{
+            border: 1px solid red;
+            position: relative;
+        }
+        body>main>nav>ul{
+            list-style: none;
+            font-family: 'Playfair Display', serif;
+            display: flow-root;
+            font-size: 30px;
+            padding: 0px 10px 0px 10px;
+        }
+        body>main>section{
+            position: relative;
+            padding-left: 255px;
+   /*       padding-top: 200px;*/
+        }
+        body>main>section>section>img{
+            width: 250px;
+            height: 200px;
+        }
+        body>footer{
+/*            border: 2px solid red;*/
+            color: white;
+            background-color: black;
+/*            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;*/
+        }
+
+        body>footer>p{
+/*            position: relative;*/
+            left: 0;
+/*            right: 0;
+            top: 0;
+            bottom: 0;*/
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="assets/img3.jpg">
+
+    <ul>
+        <li>Home</li>
+        <li>Service</li>
+        <li>Contacts</li>
+        <li>About me</li>
+    </ul>
+</header>
+<main>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Service</li>
+            <li>Contacts</li>
+            <li>About me</li>
+        </ul>
+    </nav>
+    <section>
+        <section>
+                <img src="assets/img3.jpg" width="300">
+                <img src="assets/img3.jpg" width="300">
+                <img alt="" src="assets/img3.jpg" width="300">
+
+        </section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+    </section>
+</main>
+<footer>
+    <p> Developed By IJSE</p>
+</footer>
+</body>
+</html>
