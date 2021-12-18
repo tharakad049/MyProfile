@@ -10,6 +10,12 @@
     <style>
 
 
+        body > header {
+            /* border: 1px solid red;*/
+            position: relative;
+            box-shadow: 2px -4px 0px 9px black;
+        }
+
         body > header > img {
             margin: 2px;
             width: 250px;
@@ -65,14 +71,15 @@
         body>main>section{
             margin-left: 255px;
             padding: 7px;
+            min-height: 1000px;
         }
         body>main>section>section{
-            border: 1px solid red;
-            height: 200px;
+            height: 250px;
             position: relative;
         }
         body>main>section>section>img{
-            border: 1px solid green;
+            border-left: 5px solid white;
+            border-top: 5px solid white;
             position: absolute;
             width: calc(100%/3);
             height: 100%;
@@ -83,21 +90,24 @@
         }
         body>main>section>section>img:nth-child(2){
             left: calc(100% / 3);
+            background-size: cover;
         }
         body>main>section>section>img:nth-child(3){
             right: 0;
         }
         body>footer{
-            background-color: black;
+            background-color: #3d3838;
             height: 50px;
         }
 
         body>footer>p{
-            position: relative;
-            left: 0;
             margin: auto;
             color: white;
+            text-align: center;
+            padding: 14px;
+            font-weight: bold;
         }
+
     </style>
 </head>
 <body>
