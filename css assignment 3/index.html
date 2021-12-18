@@ -4,6 +4,100 @@
     <meta charset="UTF-8">
     <title>Assignment 3</title>
 
+    <!--  <style>
+          body > section {
+              height: 800px;
+              position: relative;
+          }
+
+          body > main > section {
+              position: fixed;
+              width: 225px;
+              height: 225px;
+              border: 15px solid #bab5b5;
+              border-radius: 200px;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              top: 0;
+              margin: auto;
+          }
+
+          body > main > section > div {
+              position: fixed;
+              width: 200px;
+              height: 200px;
+              border: 15px solid #fc0000;
+              border-radius: 122px;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              top: 0;
+              margin: auto;
+          }
+
+          body > section:nth-child(2) > div {
+              width: 200px;
+              height: 200px;
+              background: #0331fe;
+              position: relative;
+              right: 0;
+              bottom: 0;
+              top: 311px;
+              left: 0;
+              margin: auto;
+              border-radius: 100px;
+          }
+
+          body > section:nth-child(3) > div {
+              width: 200px;
+              height: 200px;
+              background: #0331fe;
+              position: relative;
+              right: 0;
+              bottom: 0;
+              top: 340px;
+              left: 0;
+              margin: auto;
+              border-radius: 100px;
+          }
+
+          body > section:nth-child(4) > div {
+              width: 200px;
+              height: 200px;
+              background: #0331fe;
+              position: relative;
+              right: 0;
+              bottom: 0;
+              top: 100px;
+              left: 0;
+              margin: auto;
+              border-radius: 100px;
+          }
+
+          section:nth-child(2) > div > p {
+              text-align: center;
+              color: white;
+              font-weight: bold;
+              font-family: Ubuntu;
+          }
+
+          section:nth-child(3) > div > p {
+              text-align: center;
+              color: white;
+              font-weight: bold;
+              font-family: Ubuntu;
+          }
+
+          section:nth-child(4) > div > p {
+              text-align: center;
+              color: white;
+              font-weight: bold;
+              font-family: Ubuntu;
+          }
+
+      </style>-->
+
     <style>
         body>section{
             height: 700px;
@@ -11,6 +105,7 @@
         }
         body>main>section{
             position: fixed;
+            pointer-events: initial;
             width: 225px;
             height: 225px;
             border: 15px solid #bab5b5;
@@ -34,55 +129,70 @@
             margin: auto;
         }
 
-        body>section>div{
+        body>section:nth-child(2)>div{
             width: 200px;
             height: 200px;
-            background: #0331fe;
+            background: #a54444;
             position: relative;
             right: 0;
             bottom: 0;
-            top: 319px;
+            top: 419px;
             left: 0;
             margin: auto;
-            border-radius: 100px;
+            border-radius: 120px;
         }
-        body>section:nth-child(3)>p{
+        body>section:nth-child(3)>div{
             width: 200px;
             height: 200px;
-            background: #0331fe;
+            background: #a54444;
             position: relative;
             right: 0;
             bottom: 0;
             top: 340px;
             left: 0;
             margin: auto;
-            border-radius: 100px;
+            border-radius: 120px;
         }
-        body>section:nth-child(4)>p{
+        body>section:nth-child(4)>div{
             width: 200px;
             height: 200px;
-            background: #0331fe;
+            background: #a54444;
             position: relative;
             right: 0;
             bottom: 0;
-            top: 182px;
+            top: 100px;
             left: 0;
             margin: auto;
-            border-radius: 100px;
+            border-radius: 120px;
         }
 
-        section>div>p{
-/*            color: white;
-            position: fixed;
-            font-weight: bold;
-            font-family: Ubuntu;
-            cursor: pointer;*/
-
+        section:nth-child(2)>div>p{
             text-align: center;
+            line-height: 200px;
+            margin-top: -100px;
             color: white;
             font-weight: bold;
+            font-size: 45px;
             font-family: Ubuntu;
-            cursor: pointer;
+        }
+        section:nth-child(3)>div>p{
+            text-align: center;
+            line-height: 200px;
+            margin-top: -100px;
+            color: white;
+            font-weight: bold;
+            font-size: 40px;
+            font-family: Ubuntu;
+        }
+        section:nth-child(4)>div>p{
+            text-space: 20px;
+            text-align: center;
+            line-height: 57px;
+            margin-top: 0;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            font-family: Ubuntu;
         }
 
     </style>
@@ -100,10 +210,16 @@
     </div>
 </section>
 <section>
-    <p>Wellcome to</p>
+    <div><p>Wellcome to</p></div>
+
 </section>
 <section>
-    <p>Institute of software engineering</p>
+    <div><p>Institute
+        Of
+        Software
+        Engineering.
+    </p></div>
+
 </section>
 
 </body>
