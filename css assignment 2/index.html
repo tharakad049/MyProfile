@@ -8,11 +8,7 @@
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <style>
-        body > header {
-            /* border: 1px solid red;*/
-            position: relative;
-            box-shadow: 2px -4px 0px 9px black;
-        }
+
 
         body > header > img {
             margin: 2px;
@@ -44,12 +40,13 @@
             width: 250px;
             top: 0;
             bottom: 0;
-            background: red;
+            background: indigo;
             margin: auto;
+            min-height: 100px;
         }
 
         body>main{
-            border: 1px solid red;
+            /*            border: 1px solid red;*/
             position: relative;
         }
         body>main>nav>ul{
@@ -57,21 +54,38 @@
             font-family: 'Playfair Display', serif;
             display: flow-root;
             font-size: 30px;
+            color: white;
             padding: 0px 10px 0px 10px;
         }
+
+        body>main>nav>ul>li{
+            padding: 10px;
+            /*         display: inline-block;*/
+        }
         body>main>section{
-            position: relative;
-            padding-left: 255px;
-            padding-top: 5px;
+            margin-left: 255px;
+            padding: 7px;
         }
         body>main>section>section{
             border: 1px solid red;
+            height: 200px;
             position: relative;
         }
         body>main>section>section>img{
-            position: relative;
-            width: 25vw;
-            height: 25vh;
+            border: 1px solid green;
+            position: absolute;
+            width: calc(100%/3);
+            height: 100%;
+        }
+
+        body>main>section>section>img:nth-child(1){
+            left: 0;
+        }
+        body>main>section>section>img:nth-child(2){
+            left: calc(100% / 3);
+        }
+        body>main>section>section>img:nth-child(3){
+            right: 0;
         }
         body>footer{
             background-color: black;
@@ -84,7 +98,6 @@
             margin: auto;
             color: white;
         }
-
     </style>
 </head>
 <body>
