@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project1</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        html, body
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            /*            width: 1170px;
+                        margin: 0 auto;*/
+        }
+        header {
+            height: 50px;
+            background-color: red;
+            width: 100%;
+            z-index: 10;
+            position: fixed;
+            text-align: left;
+        }
+
+        .logo {
+            width: 30%;
+            /*            float: left;*/
+            line-height: 10px;
+            color: white;
+        }
+
+        section
+        {
+            padding: 0 30px;
+            position: sticky;
+            font-size: 100px;
+            top: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section:nth-child(1) {background-color: white;}
+        section:nth-child(2) {background-color: white;}
+        section:nth-child(3) {background-color: blue;}
+        section:nth-child(4) {background-color: gray;}
+        section:nth-child(5) {background-color: red;}
+        section:nth-child(6) {background-color: darkblue;}
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <h1>Card 1</h1>
+        </div>
+    </div>
+</header>
+<section>
+    <h1>Hello</h1>
+</section>
+<section>
+    <h1>How</h1>
+</section>
+<section>
+    <h1>Are</h1>
+</section>
+<section>
+    <h1>You..!</h1>
+</section>
+</body>
+</html>
