@@ -8,9 +8,9 @@
 
 .bg-1 img{
     position: absolute;
-    width: 1518px;
-    height: 1000px;
-    top: -300px;
+    width: 1430px;
+    height: 1093px;
+    top: -239px;
     left: 0px;
 }
 
@@ -30,18 +30,24 @@
 }
 
 .menubar{
-   position: absolute;
+/*   position: absolute;
    left: 37.66%;
    right: 5.62%;
    top: 7.8%;
    bottom: 87.48%;
-   background: #152435;
+   background: #152435;*/
+    display: inline-block;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    left: 957px;
+    position: absolute;
+    top: 71px;
 }
 
 .list{
-    display: flex;
+/*    display: flex;*/
     justify-content: space-between;
-    font-family: sans-serif;
+/*    font-family: sans-serif;*/
 }
 
 .list-item a{
@@ -103,17 +109,17 @@
 .pro-pic img{
     position: absolute;
     display: flex;
-    width: 200px;
-    height: 200px;
+    width: 204px;
+    height: 221px;
     left: 167px;
     top: 352px;
-    border-radius: 75px;
+    border-radius: 117px;
     overflow: hidden;
 }
 
 .box-1{
     position: absolute;
-    width: 1370px;
+    width: 1312px;
     height: 200px;
     top: 450px;
     left: 96px;
@@ -247,7 +253,7 @@
 
 .box-3{
     position: absolute;
-    width: 662px;
+    width: 600px;
     height: 500px;
     top: 850px;
     left: 800px;
