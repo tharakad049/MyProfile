@@ -109,18 +109,53 @@
             font-weight: bold;
         }
 
-        @media all and (max-width: 425px) {
+        @media all and (max-width: 500px) {
             body>header {
-                height: 87px;
+                height: 80px;
+            }
+            body > header > img {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 10px;
+            }
+            body > header > ul {
+                right: 30px;
+                bottom: 10px;
+                left: 0;
+                right: 0;
+                font-size: 19px;
+                width: max-content;
+                margin: auto;
+                padding-left: 0;
+            }
+
+            body > main > nav {
+                display: none;
+            }
+
+            body > main > section {
+                margin-left: 0;
+            }
+
+            body > main > section > section {
+                flex-direction: column;
+                height: 699px;
             }
         }
 
+        @media all and (min-width: 500px) and (max-width: 800px) {
+            body > header {
+                height: 80px;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="assets/img3.jpg">
+    <img src="assets/images/ijselogo.png">
 
     <ul>
         <li>Home</li>
@@ -140,9 +175,9 @@
     </nav>
     <section>
         <section>
-            <img src="assets/img3.jpg" width="300">
-            <img src="assets/img3.jpg" width="300">
-            <img src="assets/img3.jpg" width="300">
+            <img src="assets/images/img1.jpg" width="300">
+            <img src="assets/images/img2.jpg" width="300">
+            <img src="assets/images/img3.jpg" width="300">
         </section>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
             doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
