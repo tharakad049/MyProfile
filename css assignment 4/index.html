@@ -1,38 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Project1</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>assignment 4</title>
+
     <style>
-
-        html, body
-        {
-            margin: 0;
-            padding: 0;
+        section {
+            height: 700px;
+            border: 2px solid red;
         }
 
-        .wrapper {
-            /*            width: 1170px;
-                        margin: 0 auto;*/
-        }
-        header {
-            height: 50px;
+        body > section>h1{
             background-color: red;
-            width: 100%;
             z-index: 10;
-            position: fixed;
             text-align: left;
+            color: green;
+            font-size: 70px;
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            height: 70px;
+            margin: 0;
         }
 
-        .logo {
-            width: 30%;
-            /*            float: left;*/
-            line-height: 10px;
-            color: white;
-        }
-
-        section
-        {
+        body section>div {
             padding: 0 30px;
             position: sticky;
             font-size: 100px;
@@ -43,34 +34,33 @@
             justify-content: center;
         }
 
-        section:nth-child(1) {background-color: white;}
-        section:nth-child(2) {background-color: white;}
-        section:nth-child(3) {background-color: blue;}
-        section:nth-child(4) {background-color: gray;}
-        section:nth-child(5) {background-color: red;}
-        section:nth-child(6) {background-color: darkblue;}
-
+        section:nth-child(1) {background-color: #F8F155;}
+        section:nth-child(2) {background-color: aqua;}
+        section:nth-child(3) {background-color: gray;}
+        section:nth-child(4) {background-color: sandybrown;}
+        section:nth-child(5) {background-color: darkblue;}
     </style>
+
 </head>
+
 <body>
-<header>
-    <div class="wrapper">
-        <div class="logo">
-            <h1>Card 1</h1>
-        </div>
-    </div>
-</header>
+
 <section>
-    <h1>Hello</h1>
+    <h1>Card 1</h1>
+    <div>Hello</div>
 </section>
 <section>
-    <h1>How</h1>
+    <h1>Card 2</h1>
+    <div>How</div>
 </section>
 <section>
-    <h1>Are</h1>
+    <h1>Card 3</h1>
+    <div>Are</div>
 </section>
 <section>
-    <h1>You..!</h1>
+    <h1>Card 4</h1>
+    <div>Yoy..?</div>
 </section>
+
 </body>
 </html>
