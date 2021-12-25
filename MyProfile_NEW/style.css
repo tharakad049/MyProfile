@@ -15,6 +15,7 @@
 }
 
 .logo-1 h1{
+    background: none;
    position: absolute;
    width: 70px;
    height: 70px;
@@ -77,6 +78,7 @@
 }
 
 .name h1{
+    background: none;
     position: absolute;
     width: 400px;
     height: 127px;
@@ -92,6 +94,7 @@
 }
 
 .name h2{
+    background: none;
     position: absolute;
     width: 590px;
     height: 50px;
@@ -456,6 +459,7 @@
 }
 
 .download a{
+    background: none;
     position: absolute;
     width: 135px;
     height: 25px;
@@ -685,10 +689,10 @@
 
 .box-9{
     position: absolute;
-    width: 1320px;
-    height: 700px;
+    width: 1350px;
+    height: 500px;
     top: 2250px;
-    left: 100px;
+    left: 43px;
     background: #D66969;
     border-radius: 25px;
     transform: matrix(1, 0, 0, -1, 0, 0);
@@ -789,6 +793,7 @@
 }
 
 .assignment-1 img{
+    background: none;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -810,6 +815,7 @@
 }
 
 .assignment-2 img{
+    background: none;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -831,6 +837,7 @@
 }
 
 .assignment-3 img{
+    background: none;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -852,6 +859,7 @@
 }
 
 .assignment-4 img{
+    background: none;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -883,6 +891,7 @@
     background: #DF9191;
 }
 .view-1 a{
+    background: none;
     position: absolute;
     width: 46px;
     height: 25px;
@@ -908,6 +917,7 @@
     background: #DF9191;
 }
 .view-2 a{
+    background: none;
     position: absolute;
     width: 46px;
     height: 25px;
@@ -933,6 +943,7 @@
     background: #DF9191;
 }
 .view-3 a{
+    background: none;
     position: absolute;
     width: 46px;
     height: 25px;
@@ -958,6 +969,7 @@
     background: #DF9191;
 }
 .view-4 a{
+    background: none;
     position: absolute;
     width: 46px;
     height: 25px;
@@ -996,6 +1008,7 @@
 }
 
 .project-1 img{
+    background: none;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -1017,6 +1030,7 @@
 }
 
 .project-2 img{
+    background: none;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -1038,6 +1052,7 @@
 }
 
 .project-3 img{
+    background: none;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -1059,6 +1074,7 @@
 }
 
 .project-4 img{
+    background: none;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -1090,6 +1106,7 @@
     background: #DF9191;
 }
 .view-5 a{
+    background: none;
     position: absolute;
     width: 46px;
     height: 25px;
@@ -1115,6 +1132,7 @@
     background: #DF9191;
 }
 .view-6 a{
+    background: none;
     position: absolute;
     width: 46px;
     height: 25px;
@@ -1140,6 +1158,7 @@
     background: #DF9191;
 }
 .view-7 a{
+    background: none;
     position: absolute;
     width: 46px;
     height: 25px;
@@ -1165,6 +1184,7 @@
     background: #DF9191;
 }
 .view-8 a{
+    background: none;
     position: absolute;
     width: 46px;
     height: 25px;
@@ -1203,6 +1223,7 @@
 }
 
 .Activities-1 img{
+    background: none;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -1224,6 +1245,7 @@
 }
 
 .Activities-2 img{
+    background: none;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -1245,6 +1267,7 @@
 }
 
 .Activities-3 img{
+    background: none;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -1266,6 +1289,7 @@
 }
 
 .Activities-4 img{
+    background: none;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -1296,6 +1320,7 @@
     background: #DF9191;
 }
 .view-9 a{
+    background: none;
     position: absolute;
     width: 46px;
     height: 25px;
@@ -1321,6 +1346,7 @@
     background: #DF9191;
 }
 .view-10 a{
+    background: none;
     position: absolute;
     width: 46px;
     height: 25px;
@@ -1346,6 +1372,7 @@
     background: #DF9191;
 }
 .view-11 a{
+    background: none;
     position: absolute;
     width: 46px;
     height: 25px;
@@ -1371,6 +1398,7 @@
     background: #DF9191;
 }
 .view-12 a{
+    background: none;
     position: absolute;
     width: 46px;
     height: 25px;
