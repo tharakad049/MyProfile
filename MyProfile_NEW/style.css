@@ -150,7 +150,7 @@
     display: flex;
     width: 40px;
     height: 40px;
-    left: 1350px;
+    left: 1309px;
     top: 125px;
 }
 
@@ -159,7 +159,7 @@
     display: flex;
     width: 40px;
     height: 40px;
-    left: 1350px;
+    left: 1309px;
     top: 175px;
 }
 
@@ -168,7 +168,7 @@
     display: flex;
     width: 40px;
     height: 40px;
-    left: 1350px;
+    left: 1309px;
     top: 225px;
 }
 
@@ -177,7 +177,7 @@
     display: flex;
     width: 40px;
     height: 40px;
-    left: 1350px;
+    left: 1309px;
     top: 275px;
 }
 
@@ -186,7 +186,7 @@
     display: flex;
     width: 40px;
     height: 35px;
-    left: 1350px;
+    left: 1309px;
     top: 325px;
 }
 
@@ -195,7 +195,7 @@
     display: flex;
     width: 40px;
     height: 40px;
-    left: 1350px;
+    left: 1309px;
     top: 375px;
 }
 
@@ -204,7 +204,7 @@
     display: flex;
     width: 40px;
     height: 30px;
-    left: 1350px;
+    left: 1309px;
     top: 425px;
 }
 
@@ -213,7 +213,7 @@
     display: flex;
     width: 40px;
     height: 40px;
-    left: 1350px;
+    left: 1309px;
     top: 475px;
 }
 
@@ -222,7 +222,7 @@
     display: flex;
     width: 40px;
     height: 40px;
-    left: 1350px;
+    left: 1309px;
     top: 525px;
 }
 
@@ -242,10 +242,10 @@
 
 .box-2{
     position: absolute;
-    width: 625px;
+    width: 655px;
     height: 500px;
     top: 850px;
-    left: 100px;
+    left: 43px;
     background: #332525;
     border-radius: 25px;
     transform: matrix(1, 0, 0, -1, 0, 0);
@@ -253,10 +253,10 @@
 
 .box-3{
     position: absolute;
-    width: 600px;
+    width: 655px;
     height: 500px;
     top: 850px;
-    left: 800px;
+    left: 738px;
     background: #332525;
     border-radius: 25px;
     transform: matrix(1, 0, 0, -1, 0, 0);
@@ -474,8 +474,8 @@
     position: absolute;
     width: 550px;
     height: 10px;
-    top: 1450px;
-    left: 100px;
+    top: 1395px;
+    left: 70px;
     font-family: sans-serif;
     font-size: 50px;
     line-height: 50px;
@@ -486,10 +486,10 @@
 
 .box-5{
     position: absolute;
-    width: 1320px;
+    width: 1350px;
     height: 500px;
     top: 1550px;
-    left: 100px;
+    left: 43px;
     background: #265137;
     border-radius: 25px;
     transform: matrix(1, 0, 0, -1, 0, 0);
@@ -665,7 +665,7 @@
     display: flex;
     width: 580px;
     height: 380px;
-    left: 810px;
+    left: 770px;
     top: 1610px;
 }
 
