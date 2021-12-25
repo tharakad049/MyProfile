@@ -247,6 +247,14 @@
     color: #FFFFFF;
 }
 
+.abd hr{
+    position: relative;
+    top: 833px;
+    width: 1015px;
+    left: 373px;
+    color: #ffffff;
+}
+
 .box-2{
     position: absolute;
     width: 655px;
@@ -493,6 +501,14 @@
     text-transform: capitalize;
     color: #FFFFFF;
 }
+.ed hr {
+    position: relative;
+    top: 1490px;
+    width: 811px;
+    left: 575px;
+    color: #ffffff;
+}
+
 
 .box-5 {
     position: absolute;
@@ -692,6 +708,13 @@
     text-transform: capitalize;
     color: #FFFFFF;
 }
+.sk hr {
+    position: relative;
+    top: 2145px;
+    width: 1092px;
+    left: 292px;
+    color: #ffffff;
+}
 
 .box-9 {
     position: absolute;
@@ -788,6 +811,14 @@
     text-decoration-line: underline;
     text-transform: capitalize;
     color: #FFFFFF;
+}
+
+.asd hr {
+    position: relative;
+    top: 2983px;
+    width: 891px;
+    left: 487px;
+    color: #ffffff;
 }
 
 .bg-2 img {
@@ -1010,6 +1041,14 @@
     color: #FFFFFF;
 }
 
+.pro hr {
+    position: relative;
+    top: 3830px;
+    width: 1015px;
+    left: 373px;
+    color: #ffffff;
+}
+
 .bg-3 img {
     position: absolute;
     width: 1370px;
@@ -1227,6 +1266,14 @@
     text-decoration-line: underline;
     text-transform: capitalize;
     color: #FFFFFF;
+}
+
+.act hr {
+    position: relative;
+    top: 4671px;
+    width: 1015px;
+    left: 373px;
+    color: #ffffff;
 }
 
 .bg-4 img {
