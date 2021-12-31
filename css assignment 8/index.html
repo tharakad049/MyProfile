@@ -8,16 +8,57 @@
         section {
             margin-top: 0px;
             margin-left: 0px;
-            background: #F8F155;
+            position: relative;
             width: 250px;
             height: 120px;
             border-radius: 10%;
+            animation-name: case;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            animation-direction: alternate;
 
         }
 
         @keyframes case {
+            0%,20% {
+                left: 0;
+                top: 0;
+                transform: rotate(0deg);
+                background-color: #6de346;
+            }
 
+            25%{
+                left: 1200px;
+                top: 0;
+                transform: rotate(180deg);
+                background-color: red;
+            }
+
+            50%{
+                left: 1200px;
+                top: 500px;
+                transform: rotate(360deg);
+                background-color: #a54444;
+            }
+
+            75%{
+                left: 0px;
+                top: 500px;
+                transform-style: flat ;
+                transform: rotate(540deg);
+                background-color: #1d33ab;
+            }
+
+            100%{
+                left: 0;
+                top: 0;
+                transform: rotate(720deg);
+                background-color: #3d3838;
+            }
         }
+
+
     </style>
 
 </head>
