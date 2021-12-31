@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-size: 20px;
     background-color: black;
+    /*
+    background: url("image/01.jpg") ;
+    */
 }
 
 .bg-1 img{
@@ -248,6 +251,8 @@
 }
 
 .abd hr{
+    height: 4px;
+    background-color: white;
     position: relative;
     top: 833px;
     width: 1015px;
@@ -502,6 +507,8 @@
     color: #FFFFFF;
 }
 .ed hr {
+    height: 4px;
+    background-color: white;
     position: relative;
     top: 1490px;
     width: 811px;
@@ -709,6 +716,8 @@
     color: #FFFFFF;
 }
 .sk hr {
+    height: 4px;
+    background-color: white;
     position: relative;
     top: 2145px;
     width: 1092px;
@@ -814,6 +823,8 @@
 }
 
 .asd hr {
+    height: 4px;
+    background-color: white;
     position: relative;
     top: 2983px;
     width: 891px;
@@ -1042,6 +1053,8 @@
 }
 
 .pro hr {
+    height: 4px;
+    background-color: white;
     position: relative;
     top: 3830px;
     width: 1015px;
@@ -1269,6 +1282,8 @@
 }
 
 .act hr {
+    height: 4px;
+    background-color: white;
     position: relative;
     top: 4671px;
     width: 1015px;
@@ -1490,10 +1505,12 @@
 }
 
 .social-10 hr {
+    transform: rotate(
+            90deg);
     position: relative;
-    top: 5517px;
-    width: 66px;
-    left: 373px;
+    top: 5566px;
+    width: 39px;
+    left: 162px;
     color: #ffffff;
 }
 
@@ -1519,10 +1536,12 @@
     top: 5731px;
 }
 .social-11 hr {
+    transform: rotate(
+            90deg);
     position: relative;
-    top: 5520px;
-    width: 66px;
-    left: 373px;
+    top: 5625px;
+    width: 39px;
+    left: 162px;
     color: #ffffff;
 }
 
@@ -1549,13 +1568,14 @@
 }
 
 .social-12 hr {
+    transform: rotate(
+            90deg);
     position: relative;
-    top: 5524px;
-    width: 66px;
-    left: 373px;
+    top: 5500px;
+    width: 39px;
+    left: 162px;
     color: #ffffff;
 }
-
 .social-12 h1 {
     position: absolute;
     width: 200px;
@@ -1579,10 +1599,12 @@
 }
 
 .social-13 hr {
+    transform: rotate(
+            90deg);
     position: relative;
-    top: 5517px;
-    width: 66px;
-    left: 373px;
+    top: 5685px;
+    width: 39px;
+    left: 162px;
     color: #ffffff;
 }
 
@@ -1609,12 +1631,15 @@
 }
 
 .social-14 hr {
+    transform: rotate(
+            90deg);
     position: relative;
-    top: 5528px;
-    width: 66px;
-    left: 373px;
+    top: 5745px;
+    width: 39px;
+    left: 162px;
     color: #ffffff;
 }
+
 .social-14 h1 {
     position: absolute;
     width: 250px;
