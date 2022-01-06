@@ -72,6 +72,7 @@
         .wheel img{
             width: 72px;
             height: 72px;
+            animation: wheel 1s linear infinite;
         }
         .back-wheel{
             left: -165px;
@@ -81,9 +82,6 @@
             left: 80px;
             position: absolute;
         }
-
-
-
 
         @keyframes highway {
             100% {
@@ -106,6 +104,11 @@
             }
             0% {
                 transform: translateY(-1px);
+            }
+        }
+        @keyframes wheel {
+            100%{
+                transform: rotate(360deg);
             }
         }
 
