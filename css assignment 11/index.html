@@ -34,7 +34,8 @@
             background-repeat: repeat-x;
             animation: highway 5s linear infinite;
         }
-        .city{
+
+        .city {
             height: 250px;
             width: 500%;
             display: block;
@@ -47,7 +48,8 @@
             background-repeat: repeat-x;
             animation: city 20s linear infinite;
         }
-        .car{
+
+        .car {
             width: 400px;
             left: 50%;
             bottom: 100px;
@@ -55,31 +57,40 @@
             position: absolute;
             z-index: 2;
         }
-        .car img{
+
+        .car img {
             width: 100%;
             animation: car 1s linear infinite;
         }
-
+        .wheel{
+            left: 50%;
+            bottom: 100px;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 2;
+        }
 
         @keyframes highway {
             100% {
                 transform: translateX(-3400px);
             }
         }
+
         @keyframes city {
-            100%{
+            100% {
                 transform: translateX(-1400px);
             }
         }
+
         @keyframes car {
-            100%{
-                transform: translateX(-1px);
+            100% {
+                transform: translateY(-1px);
             }
-            50%{
-                transform: translateX(1px);
+            50% {
+                transform: translateY(1px);
             }
-            0%{
-                transform: translateX(-1px);
+            0% {
+                transform: translateY(-1px);
             }
         }
 
@@ -92,6 +103,10 @@
     <div class="city"></div>
     <div class="car">
         <img src="assets/images/car.png">
+    </div>
+    <div class="wheel">
+        <img src="assets/images/wheel.png" class="front-wheel">
+        <img src="assets/images/wheel.png" class="back-wheel">
     </div>
 </div>
 
