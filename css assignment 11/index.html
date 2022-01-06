@@ -47,8 +47,18 @@
             background-repeat: repeat-x;
             animation: city 20s linear infinite;
         }
-
-
+        .car{
+            width: 400px;
+            left: 50%;
+            bottom: 100px;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+        .car img{
+            width: 100%;
+            animation: car 1s linear infinite;
+        }
 
 
         @keyframes highway {
@@ -61,7 +71,17 @@
                 transform: translateX(-1400px);
             }
         }
-
+        @keyframes car {
+            100%{
+                transform: translateX(-1px);
+            }
+            50%{
+                transform: translateX(1px);
+            }
+            0%{
+                transform: translateX(-1px);
+            }
+        }
 
     </style>
 
@@ -70,6 +90,9 @@
 <div class="sky">
     <div class="highway"></div>
     <div class="city"></div>
+    <div class="car">
+        <img src="assets/images/car.png">
+    </div>
 </div>
 
 </body>
