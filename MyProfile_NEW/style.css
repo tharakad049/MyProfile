@@ -278,17 +278,23 @@
 
 .box-2{
     position: absolute;
+    animation-duration: 5s;
+    animation-iteration-count: 100;
+    animation-name: testOne;
     width: 655px;
     height: 500px;
     top: 950px;
     left: 43px;
-    background: #332525;
+    background-color: #332525;
     border-radius: 25px;
     transform: matrix(1, 0, 0, -1, 0, 0);
 }
 
 .box-3{
     position: absolute;
+    animation-duration: 5s;
+    animation-iteration-count: 100;
+    animation-name: testOne;
     width: 655px;
     height: 500px;
     top: 950px;
@@ -1524,7 +1530,7 @@
     transform: rotate(
             90deg);
     position: relative;
-    top: 5566px;
+    top: 5590px;
     width: 39px;
     left: 162px;
     color: #ffffff;
@@ -1555,7 +1561,7 @@
     transform: rotate(
             90deg);
     position: relative;
-    top: 5625px;
+    top: 5650px;
     width: 39px;
     left: 162px;
     color: #ffffff;
@@ -1587,7 +1593,7 @@
     transform: rotate(
             90deg);
     position: relative;
-    top: 5500px;
+    top: 5525px;
     width: 39px;
     left: 162px;
     color: #ffffff;
@@ -1618,7 +1624,7 @@
     transform: rotate(
             90deg);
     position: relative;
-    top: 5685px;
+    top: 5710px;
     width: 39px;
     left: 162px;
     color: #ffffff;
@@ -1650,7 +1656,7 @@
     transform: rotate(
             90deg);
     position: relative;
-    top: 5745px;
+    top: 5770px;
     width: 39px;
     left: 162px;
     color: #ffffff;
