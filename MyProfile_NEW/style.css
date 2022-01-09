@@ -861,12 +861,60 @@
     text-transform: capitalize;
     color: #ffffff;
 }
+.s1-header-3 h1 {
+    position: absolute;
+    width: 300px;
+    height: 0px;
+    top: 2825px;
+    left: 362px;
+    font-family: sans-serif;
+    font-size: 35px;
+    line-height: 50px;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+.s1-header-4 h1 {
+    position: absolute;
+    width: 300px;
+    height: 0px;
+    top: 2823px;
+    left: 1033px;
+    font-family: sans-serif;
+    font-size: 35px;
+    line-height: 50px;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+.s1-header-5 h1 {
+    position: absolute;
+    width: 300px;
+    height: 0px;
+    top: 2777px;
+    left: 105px;
+    font-family: sans-serif;
+    font-size: 35px;
+    line-height: 50px;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+.s1-header-6 h1 {
+    position: absolute;
+    height: 0px;
+    top: 2784px;
+    left: 1212px;
+    font-family: sans-serif;
+    font-size: 35px;
+    line-height: 50px;
+    text-transform: capitalize;
+    color: #ffffff;
+}
 
 .header-4 h1 li dfn {
     position: absolute;
     width: 400px;
     height: 10px;
-    top: 3050px;
+    top: 3020px;
     left: 100px;
     font-family: sans-serif;
     font-size: 50px;
@@ -880,7 +928,7 @@
     height: 4px;
     background-color: white;
     position: relative;
-    top: 2983px;
+    top: 2945px;
     width: 891px;
     left: 487px;
     color: #ffffff;
@@ -894,23 +942,24 @@
     mix-blend-mode: screen;
     left: 40px;
     border-radius: 30px;
+    filter: brightness(0.5);
 }
 
-.assignment-1 img{
+.assignment-1 img {
     background: none;
     position: absolute;
     height: 140px;
     width: 130px;
     left: 200px;
-    top: 3300px;
+    top: 3280px;
     border-radius: 0px;
 }
-.assignment-1 h1{ 
+.assignment-1 h1 {
     position: absolute;
     width: 300px;
     height: 0px;
     top: 3450px;
-    left: 160px;
+    left: 176px;
     font-family: sans-serif;
     font-size: 30px;
     line-height: 50px;
@@ -918,21 +967,21 @@
     color: #ffffff;
 }
 
-.assignment-2 img{
+.assignment-2 img {
     background: none;
     position: absolute;
     height: 140px;
     width: 130px;
-    left: 500px;
-    top: 3300px;
+    left: 501px;
+    top: 3280px;
     border-radius: 0px;
 }
-.assignment-2 h1{ 
+.assignment-2 h1 {
     position: absolute;
     width: 300px;
     height: 0px;
     top: 3450px;
-    left: 510px;
+    left: 494px;
     font-family: sans-serif;
     font-size: 30px;
     line-height: 50px;
@@ -940,21 +989,21 @@
     color: #ffffff;
 }
 
-.assignment-3 img{
+.assignment-3 img {
     background: none;
     position: absolute;
     height: 140px;
     width: 130px;
     left: 800px;
-    top: 3300px;
+    top: 3280px;
     border-radius: 0px;
 }
-.assignment-3 h1{ 
+.assignment-3 h1 {
     position: absolute;
     width: 300px;
     height: 0px;
     top: 3450px;
-    left: 820px;
+    left: 772px;
     font-family: sans-serif;
     font-size: 30px;
     line-height: 50px;
@@ -962,16 +1011,16 @@
     color: #ffffff;
 }
 
-.assignment-4 img{
+.assignment-4 img {
     background: none;
     position: absolute;
     height: 140px;
     width: 130px;
     left: 1100px;
-    top: 3300px;
+    top: 3280px;
     border-radius: 0px;
 }
-.assignment-4 h1{ 
+.assignment-4 h1 {
     position: absolute;
     width: 300px;
     height: 0px;
@@ -1070,7 +1119,7 @@
     width: 150px;
     height: 40px;
     top: 3605px;
-    left: 200px;
+    left: 188px;
     border-radius: 10px;
     transform: matrix(1, 0, 0, -1, 0, 0);
     background: #DF9191;
@@ -1081,7 +1130,7 @@
     width: 46px;
     height: 25px;
     top: 3613px;
-    left: 249px;
+    left: 240px;
     text-decoration-line: blink;
     font-family: sans-serif;
     font-style: normal;
@@ -1123,23 +1172,24 @@
     top: 4050px;
     left: 29px;
     border-radius: 30px;
+    filter: brightness(0.5);
 }
 
-.project-1 img{
+.project-1 img {
     background: none;
     position: absolute;
     height: 140px;
     width: 130px;
     left: 200px;
-    top: 4200px;
+    top: 4180px;
     border-radius: 0px;
 }
-.project-1 h1{ 
+.project-1 h1 {
     position: absolute;
     width: 300px;
     height: 0px;
     top: 4350px;
-    left: 160px;
+    left: 169px;
     font-family: sans-serif;
     font-size: 30px;
     line-height: 50px;
@@ -1153,15 +1203,15 @@
     height: 140px;
     width: 130px;
     left: 500px;
-    top: 4200px;
+    top: 4180px;
     border-radius: 0px;
 }
-.project-2 h1{ 
+.project-2 h1 {
     position: absolute;
     width: 300px;
     height: 0px;
     top: 4350px;
-    left: 510px;
+    left: 496px;
     font-family: sans-serif;
     font-size: 30px;
     line-height: 50px;
@@ -1175,15 +1225,15 @@
     height: 140px;
     width: 130px;
     left: 800px;
-    top: 4200px;
+    top: 4180px;
     border-radius: 0px;
 }
-.project-3 h1{ 
+.project-3 h1 {
     position: absolute;
     width: 300px;
     height: 0px;
     top: 4350px;
-    left: 820px;
+    left: 768px;
     font-family: sans-serif;
     font-size: 30px;
     line-height: 50px;
@@ -1197,7 +1247,7 @@
     height: 140px;
     width: 130px;
     left: 1100px;
-    top: 4200px;
+    top: 4180px;
     border-radius: 0px;
 }
 .project-4 h1{ 
@@ -1352,6 +1402,7 @@
     top: 4933px;
     left: 32px;
     border-radius: 30px;
+    filter: brightness(0.5);
 }
 
 .Activities-1 img{
