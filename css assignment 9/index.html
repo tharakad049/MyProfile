@@ -5,16 +5,29 @@
     <title>Title</title>
     <style>
         section{
-            width: 200px;
-            height: 200px;
-            border: 10px solid red;
-            border-radius: 200px;
+            width: 1px;
+            height: 1px;
+            border: 5px solid red;
+            border-radius: 100%;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
             margin: auto;
             position: absolute;
+            animation: animation 2s infinite;
+        }
+
+        @keyframes animation {
+            from{
+                height: 1px;
+                width: 1px;
+            }
+            to{
+                height: 300px;
+                width: 300px;
+                opacity: 0;
+            }
         }
         
     </style>
