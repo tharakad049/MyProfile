@@ -544,7 +544,7 @@
     display: flex;
     align-items: center;
     text-transform: capitalize;
-    color: #ffffff;
+    color: black;
 }
 
 .header-2 h1 li dfn {
@@ -780,6 +780,9 @@
 }
 
 .box-9 {
+    animation-duration: 5s;
+    animation-iteration-count: 100;
+    animation-name: testOne;
     position: absolute;
     width: 1350px;
     height: 641px;
