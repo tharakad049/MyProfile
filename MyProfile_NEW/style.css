@@ -1805,6 +1805,7 @@
     height: 40px;
     left: 1255px;
     top: 5869px;
+    cursor: pointer;
 }
 
 .send img {
@@ -1814,6 +1815,7 @@
     height: 40px;
     left: 1320px;
     top: 5869px;
+    cursor: pointer;
 }
 
 .logo-2 h1 {
