@@ -4,9 +4,6 @@
     box-sizing: border-box;
     font-size: 20px;
     background-color: black;
-    /*
-    background: url("image/01.jpg") ;
-    */
 }
 
 .bg-1 img{
@@ -50,7 +47,7 @@
     width: 860px;
     justify-content: space-around;
     font-family: sans-serif;
-    background-color: black;
+    background-color: #152435;
     /* display: inline; */
 }
 
@@ -112,7 +109,7 @@
     /* font-size: 15px; */
     /* text-transform: capitalize; */
     color: #ffffff;
-    /* background-color: #2e2b3c; */
+    background-color: #152435;
 }
 
 .hey h1{
@@ -1392,7 +1389,7 @@
     height: 4px;
     background-color: white;
     position: relative;
-    top: 4671px;
+    top: 4685px;
     width: 1015px;
     left: 373px;
     color: #ffffff;
