@@ -8,4 +8,8 @@ github link :- https://github.com/tharakad049/MyProfile
 
 OOOWebhost :- https://dilantharaka.000webhostapp.com/
 
+<<<<<<< HEAD
 image :- ![img 1](https://user-images.githubusercontent.com/92293731/148633725-229b5805-60d0-48d3-825a-44e7a9095481.jpg)
+=======
+image :- ![img 1](https://user-images.githubusercontent.com/92293731/148633725-229b5805-60d0-48d3-825a-44e7a9095481.jpg)
+>>>>>>> 4ddfd9dd3fda3c9439e7f1d20c1130cfc5b3d42e
