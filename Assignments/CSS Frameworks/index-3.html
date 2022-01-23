@@ -7,27 +7,21 @@
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        section > section > div:nth-child(1) > form > nav {
+        section>section>div:nth-child(1)>form>nav {
             background-color: #25b101;
         }
-
-        section > div > table > thead {
+        section>div>table>thead{
             background-color: #b31e74;
         }
-
-        section > section > div:nth-child(2) > nav {
+        section>section>div:nth-child(2)>nav{
             background-color: #1a5de3;
         }
-
-        body {
+        body{
             background-color: #d2caca;
         }
 
-        body > nav {
-            border: #a38282;
-        }
-
     </style>
+
 </head>
 
 <body>
@@ -35,14 +29,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
-        <img alt="" class="d-inline-block align-text-top fw-bolder" height="45" src="assets/img/pos.png" width="45">
+        <img src="assets/img/pos.png" alt="" width="45" height="45" class="d-inline-block align-text-top fw-bolder">
         Uresha POS System
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler"
                 data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -72,120 +65,178 @@
                 </li>
             </ul>
             <form class="d-flex">
-                <img alt="" class="d-inline-block align-text-top fw-bolder" height="30" src="assets/img/log.png" width="30">
-                <button class="btn btn-primary" type="button">Sign In</button>
-                <img alt="" class="d-inline-block align-text-top fw-bolder" height="30" src="assets/img/out.png" width="30">
-                <button class="btn btn-danger" type="button">Sign Out</button>
+                <img src="assets/img/log.png" alt="" width="45" height="45" class="d-inline-block align-text-top fw-bolder">
+                <button type="button" class="btn btn-primary">Sign In</button>
+                <img src="assets/img/out.png" alt="" width="45" height="45" class="d-inline-block align-text-top fw-bolder">
+                <button type="button" class="btn btn-danger">Sign Out</button>
             </form>
         </div>
     </div>
 </nav>
 
+
+
 <section class="container-fluid">
+
     <section class="row mt-5">
-        <div class="col-md-4">
+        <div class="col col-md-12 col-lg">
             <form class="bg-white">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container">
-                        <a class="navbar-brand" href="#">Search Customer</a>
+                        <a class="navbar-brand" href="#">Invoice Details</a>
                     </div>
                 </nav>
-                <div class="form-group ">
-                    <label for="exampleInputName">Customer Name :-</label>
-                    <input class="form-control" id="exampleInputName" type="text">
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="exampleInputOrderId">Order Id :-</label>
+                        <input type="text" class="form-control" id="exampleInputOrderId">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputDate">Date :-</label>
+                        <input type="Date" class="form-control" id="exampleInputDate">
+                    </div>
                 </div>
 
-                <button class="btn btn-success m-3" type="button">Search</button>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="exampleInputCustomerId">Customer Id :-</label>
+                        <input type="text" class="form-control" id="exampleInputCustomerId">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="exampleInputName">Name :-</label>
+                        <input type="text" class="form-control" id="exampleInputName">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputSalary">Salary :-</label>
+                        <input type="text" class="form-control" id="exampleInputSalary">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputAddress">Address :-</label>
+                    <input type="text" class="form-control" id="exampleInputAddress">
+                </div>
 
             </form>
-
-            <button class="btn btn-danger mt-5" type="button">Delete</button>
-            <button class="btn btn-primary mt-5" type="button">Details</button>
-            <button class="btn btn-success mt-5" type="button">Clear</button>
         </div>
 
-        <div class="col-md-6">
+        <div class="col col-md-12 col-lg">
             <nav class="navbar navbar-expand-lg navbar-light ">
                 <div class="container">
-                    <a class="navbar-brand" href="#">New Customer</a>
+                    <a class="navbar-brand" href="#">Item Select</a>
                 </div>
-
             </nav>
             <form class="bg-white">
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="exampleInputName">Item :-</label>
+                        <input type="text" class="form-control" id="exampleInputName">
 
-                <div class="form-group ">
-                    <label for="exampleInputName">Customer Id :-</label>
-                    <input class="form-control" id="exampleInputName" type="text">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputSalary">Item Code :-</label>
+                        <input type="text" class="form-control" id="exampleInputSalary">
+                    </div>
                 </div>
 
-                <div class="form-group ">
-                    <label for="exampleInputSalary">Customer Name :-</label>
-                    <input class="form-control" id="exampleInputSalary" type="text">
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="exampleInputName">Item Name :-</label>
+                        <input type="text" class="form-control" id="exampleInputName">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputSalary">Price :-</label>
+                        <input type="text" class="form-control" id="exampleInputSalary">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputSalary">Qty On Hand :-</label>
+                        <input type="text" class="form-control" id="exampleInputSalary">
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="exampleInputName">Customer Address :-</label>
-                    <input class="form-control" id="exampleInputName" type="text">
-                </div>
-                <div class="form-group ">
-                    <label for="exampleInputSalary">Customer Salary :-</label>
-                    <input class="form-control" id="exampleInputSalary" type="text">
+                <div class="form-group col">
+                    <label for="exampleInputSalary">Order Quality :-</label>
+                    <input type="text" class="form-control" id="exampleInputSalary">
                 </div>
 
-                <button class="btn btn-danger mt-4" type="button">Save</button>
-                <button class="btn btn-warning mt-4" type="button">Renew</button>
-                <button class="btn btn-primary mt-4" type="button">Close</button>
+                <button type="button" class="btn btn-danger mt-4 ">Add Item</button>
             </form>
         </div>
+
+        <div class="col col-sm-12 col-md-12 col-lg">
+            <form class="bg-white">
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="exampleInputEmail1">Cash :-</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputPassword1">Discount :-</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Balance :-</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <button type="submit" class="btn btn-success m-2 align-content-center">Purchase</button>
+            </form>
+        </div>
+
 
     </section>
 
-    <div class="mt-5 bg-white">
-        <table class="table">
+
+
+
+    <div class="mt-5">
+        <table class="table bg-white">
             <thead class="thead-light">
             <tr>
-                <th scope="col">Customer Id</th>
-                <th scope="col">Customer Name</th>
-                <th scope="col">TP</th>
-                <th scope="col">Salary</th>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>C-001</td>
-                <td>Dilan</td>
-                <td>Katharagama</td>
-                <td>Rs.500000/=</td>
+                <td>I-001</td>
+                <td>Kirisamba 5kg</td>
+                <td>Rs.1300</td>
+                <td>5</td>
+                <td>Rs.6500/=</td>
             </tr>
             <tr>
-                <td>C-002</td>
-                <td>Indika</td>
-                <td>Morawaka</td>
-                <td>Rs.430000/=</td>
+                <td>I-002</td>
+                <td>Sudu Kekulu 10kg</td>
+                <td>Rs.1300</td>
+                <td>2</td>
+                <td>Rs.2600/=</td>
             </tr>
             <tr>
-                <td>C-003</td>
-                <td>Chalani</td>
-                <td>Mathara</td>
-                <td>Rs.600000/=</td>
+                <td>I-003</td>
+                <td>Rathu Kekulu 25kg</td>
+                <td>Rs.3500</td>
+                <td>5</td>
+                <td>Rs.17500/=</td>
             </tr>
+
             <tr>
-                <td>C-004</td>
-                <td>Kawisha</td>
-                <td>Galle</td>
-                <td>Rs.450000/=</td>
-            </tr>
-            <tr>
-                <td>C-005</td>
-                <td>Milasha</td>
-                <td>Mathara</td>
-                <td>Rs.750000/=</td>
+                <td>I-004</td>
+                <td>Samba 10kg</td>
+                <td>Rs.175</td>
+                <td>20</td>
+                <td>Rs.3500/=</td>
             </tr>
 
             </tbody>
         </table>
     </div>
-
 </section>
 
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
