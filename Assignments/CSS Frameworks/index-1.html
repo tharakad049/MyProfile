@@ -115,25 +115,25 @@
             <form class="bg-white">
 
                 <div class="form-group ">
-                    <label for="exampleInputName">Customer Id :-</label>
-                    <input class="form-control" id="exampleInputName" type="text">
+                    <label for="txtId">Customer Id :-</label>
+                    <input class="form-control" id="txtId" type="text">
                 </div>
 
                 <div class="form-group ">
-                    <label for="exampleInputSalary">Customer Name :-</label>
-                    <input class="form-control" id="exampleInputSalary" type="text">
+                    <label for="txtName">Customer Name :-</label>
+                    <input class="form-control" id="txtName" type="text">
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputName">Customer Address :-</label>
-                    <input class="form-control" id="exampleInputName" type="text">
+                    <label for="txtTp">Customer Tp :-</label>
+                    <input class="form-control" id="txtTp" type="text">
                 </div>
                 <div class="form-group ">
-                    <label for="exampleInputSalary">Customer Salary :-</label>
-                    <input class="form-control" id="exampleInputSalary" type="text">
+                    <label for="txtSalary">Customer Salary :-</label>
+                    <input class="form-control" id="txtSalary" type="text">
                 </div>
 
-                <button class="btn btn-danger mt-4" type="button">Save</button>
+                <button class="btn btn-danger mt-4" id="btnSave"type="button">Save</button>
                 <button class="btn btn-warning mt-4" type="button">Renew</button>
                 <button class="btn btn-primary mt-4" type="button">Close</button>
             </form>
@@ -151,8 +151,8 @@
                 <th scope="col">Salary</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
+            <tbody id="customerTable">
+<!--            <tr>
                 <td>C-001</td>
                 <td>Dilan</td>
                 <td>077-3445556</td>
@@ -181,7 +181,7 @@
                 <td>Milasha</td>
                 <td>076-9545679</td>
                 <td>Rs.750000/=</td>
-            </tr>
+            </tr>-->
 
             </tbody>
         </table>
@@ -189,7 +189,7 @@
 
 </section>
 
-<section class="container-fluid">
+<!--<section class="container-fluid">
     <section class="row mt-5">
         <div class="col-md-4">
             <form class="bg-white">
@@ -456,8 +456,28 @@
             </tbody>
         </table>
     </div>
-</section>
+</section>-->
 
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/bootstrap/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    $("#btnSave").click(function () {
+
+        let customerId = $("#txtId").val();
+        let customerName = $("#txtName").val();
+        let customerTp = $("#txtTp").val();
+        let customerSalary = $("#txtSalary").val();
+
+    let row = `<tr><td>${customerId}</td><td>${customerName}</td><td>${customerTp}</td><td>${customerSalary}</td></tr>`
+
+        $("#customerTable").append(row);
+    $("#customerTable>tr").click(function () {
+        console.log(this);
+    });
+
+
+    });
+
+</script>
 </body>
 </html>
