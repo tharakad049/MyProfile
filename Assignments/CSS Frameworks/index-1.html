@@ -480,6 +480,20 @@
 
     });
 
+    var table = document.getElementById("customerTable"),rIndex;
+    for (var i =0;  i < table.rows.length; i++){
+        table.rows[i].onclick = function () {
+            rIndex = this.rowIndex;
+            console.log(rIndex);
+
+            document.getElementById("txtId").value = this.cells[0].innerHTML;
+            document.getElementById("txtName").value = this.cells[1].innerHTML;
+            document.getElementById("txtTp").value = this.cells[2].innerHTML;
+            document.getElementById("txtSalary").value = this.cells[3].innerHTML;
+        };
+    }
+
+
 </script>
 </body>
 </html>
