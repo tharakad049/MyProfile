@@ -17,10 +17,10 @@
             background-color: #1a5de3;
         }
         body{
-            background-color:#d2caca;
+            background-color: #d2caca;
         }
         body>nav{
-            border: #a38282;
+            border: #a77070;
         }
 
     </style>
@@ -110,23 +110,23 @@
             <form class="bg-white">
 
                 <div class="form-group ">
-                    <label for="exampleInputName">Item Code :-</label>
-                    <input type="text" class="form-control" id="exampleInputName">
+                    <label for="txtCode">Item Code :-</label>
+                    <input type="text" class="form-control" id="txtCode">
                 </div>
 
                 <div class="form-group ">
-                    <label for="exampleInputSalary">Item Name :-</label>
-                    <input type="text" class="form-control" id="exampleInputSalary">
+                    <label for="txtName">Item Name :-</label>
+                    <input type="text" class="form-control" id="txtName">
                 </div>
                 <div class="form-group ">
-                    <label for="exampleInputSalary">Item Quantity :-</label>
-                    <input type="text" class="form-control" id="exampleInputSalary">
+                    <label for="txtQuantity">Item Quantity :-</label>
+                    <input type="text" class="form-control" id="txtQuantity">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputName">Item Price :-</label>
-                    <input type="text" class="form-control" id="exampleInputName">
+                    <label for="txtPrice">Item Price :-</label>
+                    <input type="text" class="form-control" id="txtPrice">
                 </div>
-                <button type="button" class="btn btn-danger mt-4">Save</button>
+                <button type="button" id="btnSave" class="btn btn-danger mt-4">Save</button>
                 <button type="button" class="btn btn-warning mt-4">Renew</button>
                 <button type="button" class="btn btn-primary mt-4">Close</button>
             </form>
@@ -145,8 +145,8 @@
                 <th scope="col">Price</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
+            <tbody id="itemTable">
+<!--            <tr>
                 <td>I-001</td>
                 <td>Kirisamba 5kg</td>
                 <td>150</td>
@@ -175,7 +175,7 @@
                 <td>Suwadel 20kg</td>
                 <td>20</td>
                 <td>Rs.10000/=</td>
-            </tr>
+            </tr>-->
 
             </tbody>
         </table>
@@ -184,5 +184,22 @@
 </section>
 
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/bootstrap/jQuery/jquery-3.6.0.min.js"></script>
+
+<script>
+    $("#btnSave").click(function () {
+        let itemCode = $("#txtCode").val();
+        let itemName = $("#txtName").val();
+        let itemQuantity = $("#txtQuantity").val();
+        let itemPrice = $("#txtPrice").val();
+
+        let row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemQuantity}</td><td>${itemPrice}</td></tr>`;
+        $("#itemTable").append(row);
+        $("#itemTable>tr").click(function () {
+            console.log(this);
+        });
+    });
+
+</script>
 </body>
 </html>
