@@ -249,7 +249,7 @@
 
                 <div class="form-group ">
                     <label for="txtName">Item Name :-</label>
-                    <input class="form-control" id="txtName" type="text">
+                    <input class="form-control" id="txtItemName" type="text">
                 </div>
                 <div class="form-group ">
                     <label for="txtQuantity">Item Quantity :-</label>
@@ -259,7 +259,7 @@
                     <label for="txtPrice">Item Price :-</label>
                     <input class="form-control" id="txtPrice" type="text">
                 </div>
-                <button type="button" id="btnSaveAndUpdate" class="btn btn-danger mt-4">Save</button>
+                <button class="btn btn-danger mt-4" id="btnSaveAndUpdate" type="button">Save</button>
                 <button class="btn btn-warning mt-4" type="button">Renew</button>
                 <button class="btn btn-primary mt-4" type="button">Close</button>
             </form>
@@ -455,6 +455,8 @@
 
     $("#btnSave").click(function () {
 
+        $("#customerTable>tr").off("click");
+
         let customerId = $("#txtId").val();
         let customerName = $("#txtName").val();
         let customerTp = $("#txtTp").val();
@@ -464,20 +466,48 @@
 
         $("#customerTable").append(row);
         $("#customerTable>tr").click(function () {
-            console.log(this);
+            //console.log(this);
+
+            let custId = $(this).children(":eq(0)").text();
+            let custName = $(this).children(":eq(1)").text();
+            let custTp = $(this).children(":eq(2)").text();
+            let custSalary = $(this).children(":eq(3)").text();
+
+            console.log(custId, custName, custTp, custSalary);
+
+            $("#txtId").val(custId);
+            $("#txtName").val(custName);
+            $("#txtTp").val(custTp);
+            $("#txtSalary").val(custSalary);
         });
     });
 
     $("#btnSaveAndUpdate").click(function () {
+
+        $("#itemContent>tr").off("click");
+
         let itemCode = $("#txtCode").val();
-        let itemName = $("#txtName").val();
+        let itemName = $("#txtItemName").val();
         let itemQuantity = $("#txtQuantity").val();
         let itemPrice = $("#txtPrice").val();
 
         let row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemQuantity}</td><td>${itemPrice}</td></tr>`;
         $("#itemTable").append(row);
         $("#itemTable>tr").click(function () {
-            console.log(this);
+            // console.log(this);
+
+            let itmCode = $(this).children(":eq(0)").text();
+            let itmName = $(this).children(":eq(1)").text();
+            let itmQuantity = $(this).children(":eq(2)").text();
+            let itmPrice = $(this).children(":eq(3)").text();
+
+            console.log(itmCode, itmName, itmQuantity, itmPrice);
+
+            $("#txtCode").val(itmCode);
+            $("#txtItemName").val(itemName);
+            $("#txtQuantity").val(itemQuantity);
+            $("#txtPrice").val(itmPrice);
+
         });
     });
 
