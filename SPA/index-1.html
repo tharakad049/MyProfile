@@ -248,20 +248,24 @@
 
                 <div class="form-group ">
                     <label for="txtCode">Item Code :-</label>
-                    <input class="form-control" id="txtCode" type="text">
+                    <input class="form-control" placeholder="Item Code" id="txtCode" type="text">
+                    <p><small id="error" class="text-danger pl-1"></small></p>
                 </div>
 
                 <div class="form-group ">
                     <label for="txtName">Item Name :-</label>
-                    <input class="form-control" id="txtItemName" type="text">
+                    <input class="form-control" placeholder="Item Name" id="txtItemName" type="text">
+                    <p><small id="error1" class="text-danger pl-1"></small></p>
                 </div>
                 <div class="form-group ">
                     <label for="txtQuantity">Item Quantity :-</label>
-                    <input class="form-control" id="txtQuantity" type="text">
+                    <input class="form-control" placeholder="Item Quantity" id="txtQuantity" type="text">
+                    <p><small id="error2" class="text-danger pl-1"></small></p>
                 </div>
                 <div class="form-group">
                     <label for="txtPrice">Item Price :-</label>
-                    <input class="form-control" id="txtPrice" type="text">
+                    <input class="form-control" placeholder="Item Price" id="txtPrice" type="text">
+                    <p><small id="error3" class="text-danger pl-1"></small></p>
                 </div>
                 <button class="btn btn-danger mt-4" id="btnSaveAndUpdate" type="button">Save</button>
                 <button class="btn btn-warning mt-4" type="button">Renew</button>
@@ -493,7 +497,6 @@
                 $("#txtId").css('border', '4px solid green');
                 $("#error").text("");
                 $("#txtName").focus();
-                $("#btnSave").
             }else{
                 $("#txtId").css('border', '4px solid red');
                 $("#error").text("Wrong format : C00-001");
@@ -595,8 +598,61 @@
 
     });
 
+    var regExItemCode = /^(I00-)[0-9]{3,4}$/;
+    $("#txtCode").keyup(function () {
+        let input = $("#txtCode").val();
+        if (regExItemCode.test(input)){
+            $("#txtCode").css('border', '4px solid green');
+            $("#error").text("");
+            $("#txtItemName").focus();
+        }else{
+            $("#txtCode").css('border', '4px solid red');
+            $("#error").text("Wrong format : I00-001");
+        }
+    });
 
-    $("#txtCode").keydown(function (event) {
+    var regExItemName = /^[A-z]{3,}$/;
+    $("#txtItemName").keyup(function () {
+        let input = $("#txtItemName").val();
+        if (regExItemName.test(input)){
+            $("#txtItemName").css('border', '4px solid green');
+            $("#error1").text("");
+            $("#txtQuantity").focus();
+        }else{
+            $("#txtItemName").css('border', '4px solid red');
+            $("#error1").text("Wrong format : only letters");
+        }
+    });
+
+    var regExItemQuntity = /^[1-9]{1,}$/;
+    $("#txtQuantity").keyup(function () {
+        let input = $("#txtQuantity").val();
+        if (regExItemQuntity.test(input)){
+            $("#txtQuantity").css('border', '4px solid green');
+            $("#error2").text("");
+            $("#txtPrice").focus();
+        }else{
+            $("#txtQuantity").css('border', '4px solid red');
+            $("#error2").text("Wrong format : 1, 2, 10, 100");
+        }
+    });
+
+    var regExItemPrice = /^[1-9]{4,}$/;
+    $("#txtPrice").keyup(function () {
+        let input = $("#txtPrice").val();
+        if (regExItemPrice.test(input)){
+            $("#txtPrice").css('border', '4px solid green');
+            $("#error3").text("");
+            $("#btnSaveAndUpdate").focus();
+        }else{
+            $("#txtPrice").css('border', '4px solid red');
+            $("#error3").text("Wrong format : only letters");
+        }
+    });
+
+
+
+/*    $("#txtCode").keydown(function (event) {
         if (event.key == "Enter") {
             $("#txtItemName").focus();
         }
@@ -615,7 +671,7 @@
         if (event.key == "Enter") {
             $("#btnSaveAndUpdate").focus();
         }
-    });
+    });*/
 
 </script>
 
