@@ -169,21 +169,25 @@
 
                 <div class="form-group ">
                     <label for="txtId">Customer Id :-</label>
-                    <input class="form-control" id="txtId" type="text">
+                    <input class="form-control" placeholder="Customer ID" id="txtId" type="text">
+                    <p><small id="error" class="text-danger pl-1"></small></p>
                 </div>
 
                 <div class="form-group ">
                     <label for="txtName">Customer Name :-</label>
-                    <input class="form-control" id="txtName" type="text">
+                    <input class="form-control"  placeholder="Customer Name" id="txtName" type="text">
+                    <p><small id="error1" class="text-danger pl-1"></small></p>
                 </div>
 
                 <div class="form-group">
                     <label for="txtTp">Customer Tp :-</label>
-                    <input class="form-control" id="txtTp" type="text">
+                    <input class="form-control" placeholder="Customer Tp" id="txtTp" type="text">
+                    <p><small id="error2" class="text-danger pl-1"></small></p>
                 </div>
                 <div class="form-group ">
                     <label for="txtSalary">Customer Salary :-</label>
-                    <input class="form-control" id="txtSalary" type="text">
+                    <input class="form-control" placeholder="Customer Salary" id="txtSalary" type="text">
+                    <p><small id="error3" class="text-danger pl-1"></small></p>
                 </div>
 
                 <button class="btn btn-danger mt-4" id="btnSave" type="button">Save</button>
@@ -480,7 +484,57 @@
             $("#txtTp").val(custTp);
             $("#txtSalary").val(custSalary);
         });
+
     });
+        var regExCusId = /^(C00-)[0-9]{3,4}$/;
+        $("#txtId").keyup(function () {
+            let input = $("#txtId").val();
+            if (regExCusId.test(input)){
+                $("#txtId").css('border', '4px solid green');
+                $("#error").text("");
+            }else{
+                $("#txtId").css('border', '4px solid red');
+                $("#error").text("Wrong format : C00-001");
+            }
+        });
+
+    var regExCusName = /^[A-z]{3,}$/;
+    $("#txtName").keyup(function () {
+        let input = $("#txtName").val();
+        if (regExCusName.test(input)){
+            $("#txtName").css('border', '4px solid green');
+            $("#error1").text("");
+        }else{
+            $("#txtName").css('border', '4px solid red');
+            $("#error1").text("Wrong format : only letters");
+        }
+    });
+
+    var regExCusTp = /^(077-|071-|070-|074-|078-)[0-9]{7}$/;
+    $("#txtTp").keyup(function () {
+        let input = $("#txtTp").val();
+        if (regExCusTp.test(input)){
+            $("#txtTp").css('border', '4px solid green');
+            $("#error2").text("");
+        }else{
+            $("#txtTp").css('border', '4px solid red');
+            $("#error2").text("Wrong format : 077-3456789");
+        }
+    });
+
+    var regExCusSalary = /^[1-9]{4,}$/;
+    $("#txtSalary").keyup(function () {
+        let input = $("#txtSalary").val();
+        if (regExCusSalary.test(input)){
+            $("#txtSalary").css('border', '4px solid green');
+            $("#error3").text("");
+        }else{
+            $("#txtSalary").css('border', '4px solid red');
+            $("#error3").text("Wrong format : only numbers");
+        }
+    });
+
+
 
     $("#txtId").keydown(function (event) {
         if (event.key == "Enter") {
@@ -515,6 +569,8 @@
 
         let row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemQuantity}</td><td>${itemPrice}</td></tr>`;
         $("#itemTable").append(row);
+
+
         $("#itemTable>tr").click(function () {
             // console.log(this);
 
@@ -531,7 +587,10 @@
             $("#txtPrice").val(itmPrice);
 
         });
+
     });
+
+
     $("#txtCode").keydown(function (event) {
         if (event.key == "Enter") {
             $("#txtItemName").focus();
