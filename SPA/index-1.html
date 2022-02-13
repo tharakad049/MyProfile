@@ -492,6 +492,8 @@
             if (regExCusId.test(input)){
                 $("#txtId").css('border', '4px solid green');
                 $("#error").text("");
+                $("#txtName").focus();
+                $("#btnSave").
             }else{
                 $("#txtId").css('border', '4px solid red');
                 $("#error").text("Wrong format : C00-001");
@@ -504,6 +506,7 @@
         if (regExCusName.test(input)){
             $("#txtName").css('border', '4px solid green');
             $("#error1").text("");
+            $("#txtTp").focus();
         }else{
             $("#txtName").css('border', '4px solid red');
             $("#error1").text("Wrong format : only letters");
@@ -516,6 +519,7 @@
         if (regExCusTp.test(input)){
             $("#txtTp").css('border', '4px solid green');
             $("#error2").text("");
+            $("#txtSalary").focus();
         }else{
             $("#txtTp").css('border', '4px solid red');
             $("#error2").text("Wrong format : 077-3456789");
@@ -528,6 +532,7 @@
         if (regExCusSalary.test(input)){
             $("#txtSalary").css('border', '4px solid green');
             $("#error3").text("");
+            $("#btnSave").focus();
         }else{
             $("#txtSalary").css('border', '4px solid red');
             $("#error3").text("Wrong format : only numbers");
