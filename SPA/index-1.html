@@ -462,11 +462,12 @@
         $("#orderContent").css("display", "none");
     });
 
+/*
     $("#btnSave").click(function () {
         saveCustomer();
         clearAll();
         loadAllCustomers();
-/*
+/!*
         $("#customerTable>tr").off("click");
 
         let customerId = $("#txtId").val();
@@ -475,9 +476,9 @@
         let customerSalary = $("#txtSalary").val();
 
         let row = `<tr><td>${customerId}</td><td>${customerName}</td><td>${customerTp}</td><td>${customerSalary}</td></tr>`
-*/
+*!/
 
-/*        $("#customerTable").append(row);
+/!*        $("#customerTable").append(row);
         $("#customerTable>tr").click(function () {
             //console.log(this);
 
@@ -492,7 +493,7 @@
             $("#txtName").val(custName);
             $("#txtTp").val(custTp);
             $("#txtSalary").val(custSalary);
-        });*/
+        });*!/
 
     });
 
@@ -514,6 +515,10 @@
         customerDB.push(customerObject);
     }
     var regExCusId = /^(C00-)[0-9]{3,4}$/;
+    var regExCusName = /^[A-z]{3,}$/;
+    var regExCusTp = /^(077-|071-|070-|074-|078-)[0-9]{7}$/;
+    var regExCusSalary = /^[1-9]{4,}$/;
+
     $("#txtId").keyup(function () {
             let input = $("#txtId").val();
             if (regExCusId.test(input)){
@@ -525,8 +530,6 @@
                 $("#error").text("Wrong format : C00-001");
             }
         });
-
-    var regExCusName = /^[A-z]{3,}$/;
     $("#txtName").keyup(function () {
         let input = $("#txtName").val();
         if (regExCusName.test(input)){
@@ -538,8 +541,6 @@
             $("#error1").text("Wrong format : only letters");
         }
     });
-
-    var regExCusTp = /^(077-|071-|070-|074-|078-)[0-9]{7}$/;
     $("#txtTp").keyup(function () {
         let input = $("#txtTp").val();
         if (regExCusTp.test(input)){
@@ -551,8 +552,6 @@
             $("#error2").text("Wrong format : 077-3456789");
         }
     });
-
-    var regExCusSalary = /^[1-9]{4,}$/;
     $("#txtSalary").keyup(function () {
         let input = $("#txtSalary").val();
         if (regExCusSalary.test(input)){
@@ -580,8 +579,6 @@
             $("#txtTp").val(srcCustomer.getCustomerTp());
             $("#txtSalary").val(srcCustomer.getCustomerSalary());
         }
-
-
     });
 
 
@@ -621,9 +618,7 @@
     function loadAllCustomers() {
         $("#customerTable").empty();
         for (var i of customerDB) {
-            /*create a html row*/
             let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.salary}</td></tr>`;
-            /*select the table body and append the row */
             $("#customerTable").append(row);
         }
     }
@@ -634,8 +629,54 @@
         $('#txtId').focus();
         $("#btnSave").attr('disabled', true);
         loadAllCustomers();
-     /*   $("#lblcusid,#lblcusname,#lblcusaddress,#lblcussalary").text("");*/
+     /!*   $("#lblcusid,#lblcusname,#lblcusaddress,#lblcussalary").text("");*!/
     }
+
+    function checkIfValid() {
+        var cusID = $("#txtId").val();
+        if (regExCusId.test(cusID)) {
+            $("#txtName").focus();
+            var cusName = $("#txtName").val();
+            if (regExCusName.test(cusName)) {
+                $("#txtTp").focus();
+                var cusTp = $("#txtTp").val();
+                if (regExCusTp.test(cusTp)) {
+                    $("#txtSalary").focus();
+                    var cusSalary = $("#txtSalary").val();
+                    var resp = regExCusSalary.test(cusSalary);
+                    if (resp) {
+                        let res = confirm("Do you really need to add this Customer..?");
+                        if (res) {
+                            saveCustomer();
+                            clearAll();
+                        }
+                    } else {
+                        $("#txtSalary").focus();
+                    }
+                } else {
+                    $("#txtTp").focus();
+                }
+            } else {
+                $("#txtName").focus();
+            }
+        } else {
+            $("#txtId").focus();
+        }
+    }
+
+    function setButton() {
+        let b = formValid();
+        if (b) {
+            $("#btnSave").attr('disabled', false);
+        } else {
+            $("#btnSave").attr('disabled', true);
+        }
+    }
+
+    $('#btnSave').click(function () {
+        checkIfValid();
+    });
+*/
 
 /*
     $("#txtId").keydown(function (event) {
@@ -659,7 +700,6 @@
         }
     });*/
 
-/*
 
     $("#btnSave").click(function () {
         saveCustomer();
@@ -690,9 +730,9 @@
     function loadAllCustomers() {
         $("#customerTable").empty();
         for (var i of customerDB) {
-            /!*create a html row*!/
+            /*create a html row*/
             let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.tp}</td><td>${i.salary}</td></tr>`;
-            /!*select the table body and append the row *!/
+            /*select the table body and append the row */
             $("#customerTable").append(row);
         }
     }
@@ -891,7 +931,6 @@
     //validation ended
 
 
-*/
 
 
 
