@@ -203,3 +203,300 @@
 </script>
 </body>
 </html>
+
+
+
+<!--
+/*
+
+$("#btnSaveAndUpdate").click(function () {
+
+$("#itemContent>tr").off("click");
+
+let itemCode = $("#txtCode").val();
+let itemName = $("#txtItemName").val();
+let itemQuantity = $("#txtQuantity").val();
+let itemPrice = $("#txtPrice").val();
+
+let row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemQuantity}</td><td>${itemPrice}</td></tr>`;
+$("#itemTable").append(row);
+
+
+$("#itemTable>tr").click(function () {
+// console.log(this);
+
+let itmCode = $(this).children(":eq(0)").text();
+let itmName = $(this).children(":eq(1)").text();
+let itmQuantity = $(this).children(":eq(2)").text();
+let itmPrice = $(this).children(":eq(3)").text();
+
+console.log(itmCode, itmName, itmQuantity, itmPrice);
+
+$("#txtCode").val(itmCode);
+$("#txtItemName").val(itemName);
+$("#txtQuantity").val(itemQuantity);
+$("#txtPrice").val(itmPrice);
+
+});
+
+});
+
+var regExItemCode = /^(I00-)[0-9]{3,4}$/;
+$("#txtCode").keyup(function () {
+let input = $("#txtCode").val();
+if (regExItemCode.test(input)) {
+$("#txtCode").css('border', '4px solid green');
+$("#error").text("");
+$("#txtItemName").focus();
+} else {
+$("#txtCode").css('border', '4px solid red');
+$("#error").text("Wrong format : I00-001");
+}
+});
+
+var regExItemName = /^[A-z]{3,}$/;
+$("#txtItemName").keyup(function () {
+let input = $("#txtItemName").val();
+if (regExItemName.test(input)) {
+$("#txtItemName").css('border', '4px solid green');
+$("#error1").text("");
+$("#txtQuantity").focus();
+} else {
+$("#txtItemName").css('border', '4px solid red');
+$("#error1").text("Wrong format : only letters");
+}
+});
+
+var regExItemQuntity = /^[1-9]{1,}$/;
+$("#txtQuantity").keyup(function () {
+let input = $("#txtQuantity").val();
+if (regExItemQuntity.test(input)) {
+$("#txtQuantity").css('border', '4px solid green');
+$("#error2").text("");
+$("#txtPrice").focus();
+} else {
+$("#txtQuantity").css('border', '4px solid red');
+$("#error2").text("Wrong format : 1, 2, 10, 100");
+}
+});
+
+var regExItemPrice = /^[1-9]{4,}$/;
+$("#txtPrice").keyup(function () {
+let input = $("#txtPrice").val();
+if (regExItemPrice.test(input)) {
+$("#txtPrice").css('border', '4px solid green');
+$("#error3").text("");
+$("#btnSaveAndUpdate").focus();
+} else {
+$("#txtPrice").css('border', '4px solid red');
+$("#error3").text("Wrong format : only letters");
+}
+});
+*/-->
+
+<!--<section class="container-fluid" id="itemContent">
+    <section class="row mt-5">
+        <div class="col-md-4">
+            <form class="bg-white">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">Search Item</a>
+                    </div>
+                </nav>
+                <div class="form-group ">
+                    <label for="exampleInputName">Item Code :-</label>
+                    <input class="form-control" id="exampleInputName" type="text">
+                </div>
+
+                <button class="btn btn-success m-3" type="button">Search</button>
+
+            </form>
+
+            <button class="btn btn-danger mt-5" type="button">Delete</button>
+            <button class="btn btn-primary mt-5" type="button">Details</button>
+            <button class="btn btn-success mt-5" type="button">Clear</button>
+        </div>
+
+        <div class="col-md-6">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container">
+                    <a class="navbar-brand" href="#">New Item</a>
+                </div>
+
+            </nav>
+            <form class="bg-white">
+
+                <div class="form-group ">
+                    <label for="txtCode">Item Code :-</label>
+                    <input class="form-control" id="txtCode" placeholder="Item Code" type="text">
+                    <p><small class="text-danger pl-1" id="error"></small></p>
+                </div>
+
+                <div class="form-group ">
+                    <label for="txtName">Item Name :-</label>
+                    <input class="form-control" id="txtItemName" placeholder="Item Name" type="text">
+                    <p><small class="text-danger pl-1" id="error1"></small></p>
+                </div>
+                <div class="form-group ">
+                    <label for="txtQuantity">Item Quantity :-</label>
+                    <input class="form-control" id="txtQuantity" placeholder="Item Quantity" type="text">
+                    <p><small class="text-danger pl-1" id="error2"></small></p>
+                </div>
+                <div class="form-group">
+                    <label for="txtPrice">Item Price :-</label>
+                    <input class="form-control" id="txtPrice" placeholder="Item Price" type="text">
+                    <p><small class="text-danger pl-1" id="error3"></small></p>
+                </div>
+                <button class="btn btn-danger mt-4" id="btnSaveAndUpdate" type="button">Save</button>
+                <button class="btn btn-warning mt-4" type="button">Renew</button>
+                <button class="btn btn-primary mt-4" type="button">Close</button>
+            </form>
+        </div>
+
+    </section>
+
+    <div class="mt-5 bg-white">
+        <table class="table">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+            </tr>
+            </thead>
+            <tbody id="itemTable"></tbody>
+        </table>
+    </div>
+
+</section>-->
+
+<!--<section class="container-fluid" id="orderContent">
+
+    <section class="row mt-5">
+        <div class="col col-md-12 col-lg">
+            <form class="bg-white">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">Invoice Details</a>
+                    </div>
+                </nav>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="exampleInputOrderId">Order Id :-</label>
+                        <input class="form-control" id="exampleInputOrderId" type="text">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputDate">Date :-</label>
+                        <input class="form-control" id="exampleInputDate" type="Date">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="exampleInputCustomerId">Customer Id :-</label>
+                        <input class="form-control" id="exampleInputCustomerId" type="text">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="exampleInputName">Name :-</label>
+                        <input class="form-control" id="exampleInputName" type="text">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputSalary">Salary :-</label>
+                        <input class="form-control" id="exampleInputSalary" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputAddress">Address :-</label>
+                    <input class="form-control" id="exampleInputAddress" type="text">
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col col-md-12 col-lg">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Item Select</a>
+                </div>
+            </nav>
+            <form class="bg-white">
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="exampleInputName">Item :-</label>
+                        <input class="form-control" id="exampleInputName" type="text">
+
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputSalary">Item Code :-</label>
+                        <input class="form-control" id="exampleInputSalary" type="text">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="exampleInputName">Item Name :-</label>
+                        <input class="form-control" id="exampleInputName" type="text">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputSalary">Price :-</label>
+                        <input class="form-control" id="exampleInputSalary" type="text">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputSalary">Qty On Hand :-</label>
+                        <input class="form-control" id="exampleInputSalary" type="text">
+                    </div>
+                </div>
+
+                <div class="form-group col">
+                    <label for="exampleInputSalary">Order Quality :-</label>
+                    <input class="form-control" id="exampleInputSalary" type="text">
+                </div>
+
+                <button class="btn btn-danger mt-4 " type="button">Add Item</button>
+            </form>
+        </div>
+
+        <div class="col col-sm-12 col-md-12 col-lg">
+            <form class="bg-white">
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="exampleInputEmail1">Cash :-</label>
+                        <input aria-describedby="emailHelp" class="form-control" id="exampleInputEmail1" type="email">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputPassword1">Discount :-</label>
+                        <input class="form-control" id="exampleInputPassword1" type="password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Balance :-</label>
+                    <input class="form-control" id="exampleInputPassword1" type="password">
+                </div>
+
+                <button class="btn btn-success m-2 align-content-center" type="submit">Purchase</button>
+            </form>
+        </div>
+
+
+    </section>
+
+
+    <div class="mt-5">
+        <table class="table bg-white">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</section>-->

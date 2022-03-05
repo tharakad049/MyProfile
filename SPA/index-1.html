@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>POS System</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/styles/style.css" rel="stylesheet">
+    <link href="assets/fonts/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
 
     <style>
 
@@ -21,11 +24,11 @@
         }
 
         body {
-            background-color: #d2caca;
+            background-color: rgba(161, 130, 130, 0.55);
         }
 
         body > nav {
-            border: #a38282;
+            border: #ffffff;
         }
 
     </style>
@@ -33,12 +36,12 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+<nav class="navbar navbar-expand-lg navbar-light navColor">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
-        <img alt="" class="d-inline-block align-text-top fw-bolder" height="45" src="assets/img/pos.png" width="45">
-        <a class="navbar-brand fw-bolder text-success brandName" href="#">
-            Uresha POS System</a>
+        <img alt="" class="d-inline-block align-text-top fw-bolder" height="45"
+             src="assets/images/supermarket-pos-system-500x500.jpg" width="45">
+        <a class="navbar-brand fw-bolder text-success brandName" href="#"> Uresha POS System</a>
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler"
                 data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
@@ -52,10 +55,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="#">Orders</a>
-                </li>
-                <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="#">Items</a>
+                    <a aria-current="page" class="nav-link active link-Order" href="#">Orders</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -69,16 +69,18 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#" id="linkOrder">Manage Order</a></li>
+                        <li><a class="dropdown-item link-Order" href="#" id="linkOrder">Manage Order</a></li>
                     </ul>
                 </li>
             </ul>
             <form class="d-flex">
-                <img alt="" class="d-inline-block align-text-top fw-bolder" height="30" src="assets/img/log.png"
-                     width="30">
+                <img alt="" class="d-inline-block align-text-top fw-bolder" height="40"
+                     src="assets/images/icons8-login-50.png"
+                     width="40">
                 <button class="btn btn-primary" type="button">Sign In</button>
-                <img alt="" class="d-inline-block align-text-top fw-bolder" height="30" src="assets/img/out.png"
-                     width="30">
+                <img alt="" class="d-inline-block align-text-top fw-bolder" height="40"
+                     src="assets/images/icons8-logout-rounded-left-50.png"
+                     width="40">
                 <button class="btn btn-danger" type="button">Sign Out</button>
             </form>
         </div>
@@ -86,343 +88,495 @@
 </nav>
 
 <section class="container-fluid" id="dashboardContent">
-    <div class="carousel carousel-dark slide" data-bs-ride="carousel" id="carouselExampleDark">
-        <div class="col-12 col-lg-13 px-xl-5 ">
-            <div class="carousel-indicators">
-                <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0"
-                        data-bs-target="#carouselExampleDark" type="button"></button>
-                <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleDark"
-                        type="button"></button>
-                <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleDark"
-                        type="button"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img alt="..." class="d-block w-100" src="assets/img/epic-meal-prep-5.jpg">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+    <section class="row mt-2">
+        <div class="col-12 col-lg-7 px-0">
+            <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleCaptions">
+                <div class="carousel-indicators">
+                    <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0"
+                            data-bs-target="#carouselExampleCaptions" type="button"></button>
+                    <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleCaptions"
+                            type="button"></button>
+                    <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleCaptions"
+                            type="button"></button>
+                </div>
+                <div class="images">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100"
+                                 src="assets/images/indian-food-curry-butter-chicken-palak-paneer-chiken-tikka-biryani-vegetable-curry-papad-dal-palak-sabji-jira-alu-rice-138549925.jpg">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100"
+                                 src="assets/images/cauliflower-and-sweet-potato-curry-recipe-523046-1.jpg">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100"
+                                 src="assets/images/quick-and-easy-meal-planner-128684-2.jpg">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img alt="..." class="d-block w-100"
-                         src="assets/img/204_Meal_Prep_Hero_Image_1__20210324-1067x600.jpg">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img alt="..." class="d-block w-100" src="assets/img/Screen+Shot+2020-12-21+at+8.58.15+AM.png">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleDark"
-                    type="button">
-                <span aria-hidden="true" class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleDark"
-                    type="button">
-                <span aria-hidden="true" class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
 
+                <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleCaptions"
+                        type="button">
+                    <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleCaptions"
+                        type="button">
+                    <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="col  mt-3 mt-lg-0 ">
+            <div class="row">
+                <div class="col">
+                    <div class="myCard">
+                        <i class="fas fa-users"></i>
+                        <h1>All Customers</h1>
+                        <h2>450</h2>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="myCard">
+                        <i class="fab fa-shopify"></i>
+                        <h1>All Items</h1>
+                        <h2>739</h2>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="myCard">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h1>All Orders</h1>
+                        <h2>7500</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </section>
 
 <section class="container-fluid" id="customerContent">
-    <section class="row mt-5">
-        <div class="col-md-4">
-            <form class="bg-white">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container">
-                        <a class="navbar-brand" href="#">Search Customer</a>
+    <div class="container-fluid mt-4">
+        <div class="jumbotron pt-4">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header bg-primary font-weight-bolder">Search Customer</div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Customer Id :- </label>
+                                            <input class="form-control" id="txtSearchCusID" placeholder="Customer ID" type="text">
+                                        <span class="control-error" id="orderId-invalid-error"></span>
+                                        </div>
+                                    </div>
+                                    <hr class="mt-4">
+                                </div>
+                                <div class="form-group text-right">
+                                    <button class="btn btn-success m-3" id="btnSearch" type="button">Search</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </nav>
-                <div class="form-group ">
-                    <label for="txtSearchCusID">Customer Name :-</label>
-                    <input class="form-control" id="txtSearchCusID" type="text">
+                    <button class="btn btn-danger mt-5" type="button">Delete</button>
+                    <button class="btn btn-primary mt-5" type="button">Details</button>
+                    <button class="btn btn-success mt-5" type="button">Clear</button>
                 </div>
+                <div class="col-lg-5 mt-lg-0 mt-3">
+                    <div class="card">
+                        <div class="card-header bg-primary  font-weight-bolder">New Customer</div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group ">
+                                            <label for="txtId">Customer Id :-</label>
+                                            <input class="form-control" id="txtId" placeholder="Customer ID"
+                                                   type="text">
+                                            <p><small class="text-danger pl-1" id="lblcusid"></small></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="txtName">Customer Name :- </label>
+                                            <input class="form-control" id="txtName" placeholder="Customer Name" type="text"></div>
+                                        <p><small class="text-danger pl-1" id="lblcusname"></small></p>
 
-                <button class="btn btn-success m-3" id="btnSearch" type="button">Search</button>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label for="txtTp">Customer Tp :- </label>
+                                            <input class="form-control" id="txtTp" placeholder="Customer Tp" type="text">
+                                            <p><small class="text-danger pl-1" id="lblcustp"></small></p>
 
-            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="txtSalary">Customer Salary :- </label>
+                                            <input class="form-control" id="txtSalary" placeholder="Customer Salary"
+                                                   type="text">
+                                            <p><small class="text-danger pl-1" id="lblcussalary"></small></p>
 
-            <button class="btn btn-danger mt-5" type="button">Delete</button>
-            <button class="btn btn-primary mt-5" type="button">Details</button>
-            <button class="btn btn-success mt-5" type="button">Clear</button>
+                                        </div>
+                                    </div>
+                                    <hr class="mt-4">
+                                </div>
+                                <div class="form-group text-right">
+                                    <button class="btn btn-danger col-12 col-sm-auto mt-1" id="btnSave" type="button">Save</button>
+                                    <button class="btn btn-warning col-12 col-sm-auto mt-1" type="button">Renew</button>
+                                    <button class="btn btn-primary col-12 col-sm-auto mt-1" type="button">Close</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 mt-4" style="height:180px; overflow-y: scroll">
+                <table class="table table-bordered text-white">
+                    <thead class="bg-primary">
+                    <tr>
+                        <th>Customer Id</th>
+                        <th>Customer Name</th>
+                        <th>Customer Tp</th>
+                        <th>Customer Salary</th>
+                    </tr>
+                    </thead>
+                    <tbody class="bg-light text-dark" id="customerTable">
+
+                    </tbody>
+                </table>
+            </div>
         </div>
-
-        <div class="col-md-6">
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <div class="container">
-                    <a class="navbar-brand" href="#">New Customer</a>
-                </div>
-
-            </nav>
-            <form class="bg-white">
-
-                <div class="form-group ">
-                    <label for="txtId">Customer Id :-</label>
-                    <input class="form-control" placeholder="Customer ID" id="txtId" type="text">
-                    <p><small id="error" class="text-danger pl-1"></small></p>
-                </div>
-
-                <div class="form-group ">
-                    <label for="txtName">Customer Name :-</label>
-                    <input class="form-control"  placeholder="Customer Name" id="txtName" type="text">
-                    <p><small id="error1" class="text-danger pl-1"></small></p>
-                </div>
-
-                <div class="form-group">
-                    <label for="txtTp">Customer Tp :-</label>
-                    <input class="form-control" placeholder="Customer Tp" id="txtTp" type="text">
-                    <p><small id="error2" class="text-danger pl-1"></small></p>
-                </div>
-                <div class="form-group ">
-                    <label for="txtSalary">Customer Salary :-</label>
-                    <input class="form-control" placeholder="Customer Salary" id="txtSalary" type="text">
-                    <p><small id="error3" class="text-danger pl-1"></small></p>
-                </div>
-
-                <button class="btn btn-danger mt-4" id="btnSave" type="button">Save</button>
-                <button class="btn btn-warning mt-4" type="button">Renew</button>
-                <button class="btn btn-primary mt-4" type="button">Close</button>
-            </form>
-        </div>
-
-    </section>
-
-    <div class="mt-5 bg-white">
-        <table class="table">
-            <thead class="thead-light">
-            <tr>
-                <th scope="col">Customer Id</th>
-                <th scope="col">Customer Name</th>
-                <th scope="col">TP</th>
-                <th scope="col">Salary</th>
-            </tr>
-            </thead>
-            <tbody id="customerTable"></tbody>
-        </table>
     </div>
-
 </section>
 
 <section class="container-fluid" id="itemContent">
-    <section class="row mt-5">
-        <div class="col-md-4">
-            <form class="bg-white">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container">
-                        <a class="navbar-brand" href="#">Search Item</a>
+    <div class="container-fluid mt-4">
+        <div class="jumbotron pt-4">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header bg-primary font-weight-bolder">Search Item</div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Item Code :- </label>
+                                            <input class="form-control" id="txtSearchItemCode" placeholder="Item Code" type="text">
+                                            <span class="control-error" id="orderId-invalid-error"></span>
+                                        </div>
+                                    </div>
+                                    <hr class="mt-4">
+                                </div>
+                                <div class="form-group text-right">
+                                    <button class="btn btn-success m-3" id="btnsearch" type="button">Search</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </nav>
-                <div class="form-group ">
-                    <label for="exampleInputName">Item Code :-</label>
-                    <input class="form-control" id="exampleInputName" type="text">
+                    <button class="btn btn-danger mt-5" type="button">Delete</button>
+                    <button class="btn btn-primary mt-5" type="button">Details</button>
+                    <button class="btn btn-success mt-5" type="button">Clear</button>
                 </div>
+                <div class="col-lg-5 mt-lg-0 mt-3">
+                    <div class="card">
+                        <div class="card-header bg-primary  font-weight-bolder">New Item</div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group ">
+                                            <label for="txtCode">Item Code :-</label>
+                                            <input class="form-control" id="txtCode" placeholder="Item Code" type="text">
+                                            <p><small class="text-danger pl-1" id="lblItemCode"></small></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="txtName">Item Name :-</label>
+                                            <input class="form-control" id="txtItemName" placeholder="Item Name" type="text">
+                                            <p><small class="text-danger pl-1" id="lblItemName"></small></p>
 
-                <button class="btn btn-success m-3" type="button">Search</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label for="txtQuantity">Item Quantity :-</label>
+                                            <input class="form-control" id="txtQuantity" placeholder="Item Quantity" type="text">
+                                            <p><small class="text-danger pl-1" id="lblItemQuantity"></small></p>
 
-            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="txtPrice">Item Price :-</label>
+                                            <input class="form-control" id="txtPrice" placeholder="Item Price" type="text">
+                                            <p><small class="text-danger pl-1" id="lblItemPrice"></small></p>
 
-            <button class="btn btn-danger mt-5" type="button">Delete</button>
-            <button class="btn btn-primary mt-5" type="button">Details</button>
-            <button class="btn btn-success mt-5" type="button">Clear</button>
+                                        </div>
+                                    </div>
+                                    <hr class="mt-4">
+                                </div>
+                                <div class="form-group text-right">
+                                    <button class="btn btn-danger col-12 col-sm-auto mt-1" id="btnSaveAndUpdate" type="button">Save</button>
+                                    <button class="btn btn-warning col-12 col-sm-auto mt-1" type="button">Renew</button>
+                                    <button class="btn btn-primary col-12 col-sm-auto mt-1" type="button">Close</button>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 mt-4" style="height:180px; overflow-y: scroll">
+                <table class="table table-bordered text-white">
+                    <thead class="bg-primary">
+                    <tr>
+                        <th>Item Code</th>
+                        <th>Item Name</th>
+                        <th>Item Quantity</th>
+                        <th>Item Price</th>
+                    </tr>
+                    </thead>
+                    <tbody class="bg-light text-dark" id="itemTable">
+
+                    </tbody>
+                </table>
+            </div>
         </div>
-
-        <div class="col-md-6">
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <div class="container">
-                    <a class="navbar-brand" href="#">New Item</a>
-                </div>
-
-            </nav>
-            <form class="bg-white">
-
-                <div class="form-group ">
-                    <label for="txtCode">Item Code :-</label>
-                    <input class="form-control" placeholder="Item Code" id="txtCode" type="text">
-                    <p><small id="error" class="text-danger pl-1"></small></p>
-                </div>
-
-                <div class="form-group ">
-                    <label for="txtName">Item Name :-</label>
-                    <input class="form-control" placeholder="Item Name" id="txtItemName" type="text">
-                    <p><small id="error1" class="text-danger pl-1"></small></p>
-                </div>
-                <div class="form-group ">
-                    <label for="txtQuantity">Item Quantity :-</label>
-                    <input class="form-control" placeholder="Item Quantity" id="txtQuantity" type="text">
-                    <p><small id="error2" class="text-danger pl-1"></small></p>
-                </div>
-                <div class="form-group">
-                    <label for="txtPrice">Item Price :-</label>
-                    <input class="form-control" placeholder="Item Price" id="txtPrice" type="text">
-                    <p><small id="error3" class="text-danger pl-1"></small></p>
-                </div>
-                <button class="btn btn-danger mt-4" id="btnSaveAndUpdate" type="button">Save</button>
-                <button class="btn btn-warning mt-4" type="button">Renew</button>
-                <button class="btn btn-primary mt-4" type="button">Close</button>
-            </form>
-        </div>
-
-    </section>
-
-    <div class="mt-5 bg-white">
-        <table class="table">
-            <thead class="thead-light">
-            <tr>
-                <th scope="col">Item Code</th>
-                <th scope="col">Item Name</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Price</th>
-            </tr>
-            </thead>
-            <tbody id="itemTable"></tbody>
-        </table>
     </div>
-
 </section>
 
 <section class="container-fluid" id="orderContent">
+    <div class="container-fluid mt-4">
+        <!--main tile-->
+        <div class="jumbotron pt-4">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header bg-primary font-weight-bolder">Invoice Details</div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Order ID :- </label>
+                                            <input class="form-control" id="txtOrderID" type="text">
+                                            <span class="control-error"
+                                                  id="orderId-invalid-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Order Date :- </label>
+                                            <input class="form-control" id="txtDate" type="date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Customer :-</label>
+                                            <select class="form-control" id="selectCusID">
 
-    <section class="row mt-5">
-        <div class="col col-md-12 col-lg">
-            <form class="bg-white">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container">
-                        <a class="navbar-brand" href="#">Invoice Details</a>
-                    </div>
-                </nav>
-                <div class="row">
-                    <div class="form-group col">
-                        <label for="exampleInputOrderId">Order Id :-</label>
-                        <input class="form-control" id="exampleInputOrderId" type="text">
-                    </div>
-                    <div class="form-group col">
-                        <label for="exampleInputDate">Date :-</label>
-                        <input class="form-control" id="exampleInputDate" type="Date">
+                                            </select>
+                                            <span class="control-error"
+                                                  id="cus-empty-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="txtCustomerID">Customer ID :- </label>
+                                            <input class="form-control" id="orderCustomerID">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Name :-</label>
+                                            <input class="form-control" id="orderCustomerName" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Salary :-</label>
+                                            <input class="form-control" id="orderCustomerSalary" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label>Address :-</label>
+                                            <input class="form-control" id="orderCustomerAddress" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="form-group col">
-                        <label for="exampleInputCustomerId">Customer Id :-</label>
-                        <input class="form-control" id="exampleInputCustomerId" type="text">
+                <div class="col-lg-5 mt-lg-0 mt-3">
+                    <div class="card">
+                        <div class="card-header bg-primary  font-weight-bolder">Item Select</div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Item :</label>
+                                            <select class="form-control" id="selectItemCode"></select>
+                                            <span class="control-error"
+                                                  id="item-empty-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Item Code :-</label>
+                                            <input class="form-control" id="txtItemCode" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label>Item Name :-</label>
+                                            <input class="form-control" id="txtItemDescription" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label class="">Price :-</label>
+                                            <input class="form-control" id="txtItemPrice" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label class="">QtyOnH :-</label>
+                                            <input class="form-control" id="txtQTYOnHand" type="text">
+                                        </div>
+                                    </div>
+                                    <hr class="mt-4">
+                                    <hr>
+                                    <div class="col-12 mt-4">
+                                        <div class="form-group">
+                                            <label>Order Quantity :-</label>
+                                            <input class="form-control" id="txtQty" min="1" type="number">
+                                            <span class="control-error" id="order-qty-empty-error"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group text-right">
+                                    <button class="btn btn-danger col-12 col-sm-auto mt-1" id="btnAddToTable"
+                                            type="button">
+                                        Add Item
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
+                <div class="col-lg-3">
+                    <section class="content-box-2 p-4 ">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span class="" id="total-text">Total :- </span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span id="total">00.0</span> Rs/=
+                                    </div>
+                                </div>
 
-                <div class="row">
-                    <div class="form-group col">
-                        <label for="exampleInputName">Name :-</label>
-                        <input class="form-control" id="exampleInputName" type="text">
-                    </div>
-                    <div class="form-group col">
-                        <label for="exampleInputSalary">Salary :-</label>
-                        <input class="form-control" id="exampleInputSalary" type="text">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputAddress">Address :-</label>
-                    <input class="form-control" id="exampleInputAddress" type="text">
-                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span id="total-text1">SubTotal :- </span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span id="subtotal">00.0</span> Rs/=
+                                    </div>
+                                </div>
 
-            </form>
+                            </div>
+                            <div class="col-6 mt-2">
+                                <div class="form-group">
+                                    <label>Cash :-</label>
+                                    <input class="form-control" id="txtCash" min="0" type="number">
+                                    <span class="control-error"
+                                          id="cash-empty-error"></span>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-2">
+                                <div class="form-group">
+                                    <label>Discount :-</label>
+                                    <input class="form-control" id="txtDiscount" min="0" type="number">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="form-group">
+                                    <label>Balance :-</label>
+                                    <input class="form-control" id="txtBalance" type="text">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-success mt-3" id="btnSubmitOrder" type="button">Purchase
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!--order table-->
+            <div class="col-md-12 mt-4" style="height:180px; overflow-y: scroll">
+                <table class="table table-bordered text-white">
+                    <thead class="bg-primary">
+                    <tr>
+                        <th>Item Code</th>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody class="bg-light text-dark" id="orderTable">
+
+                    </tbody>
+                </table>
+            </div>
+--
         </div>
-
-        <div class="col col-md-12 col-lg">
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <div class="container">
-                    <a class="navbar-brand" href="#">Item Select</a>
-                </div>
-            </nav>
-            <form class="bg-white">
-                <div class="row">
-                    <div class="form-group col">
-                        <label for="exampleInputName">Item :-</label>
-                        <input class="form-control" id="exampleInputName" type="text">
-
-                    </div>
-                    <div class="form-group col">
-                        <label for="exampleInputSalary">Item Code :-</label>
-                        <input class="form-control" id="exampleInputSalary" type="text">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="form-group col">
-                        <label for="exampleInputName">Item Name :-</label>
-                        <input class="form-control" id="exampleInputName" type="text">
-                    </div>
-                    <div class="form-group col">
-                        <label for="exampleInputSalary">Price :-</label>
-                        <input class="form-control" id="exampleInputSalary" type="text">
-                    </div>
-                    <div class="form-group col">
-                        <label for="exampleInputSalary">Qty On Hand :-</label>
-                        <input class="form-control" id="exampleInputSalary" type="text">
-                    </div>
-                </div>
-
-                <div class="form-group col">
-                    <label for="exampleInputSalary">Order Quality :-</label>
-                    <input class="form-control" id="exampleInputSalary" type="text">
-                </div>
-
-                <button class="btn btn-danger mt-4 " type="button">Add Item</button>
-            </form>
-        </div>
-
-        <div class="col col-sm-12 col-md-12 col-lg">
-            <form class="bg-white">
-                <div class="row">
-                    <div class="form-group col">
-                        <label for="exampleInputEmail1">Cash :-</label>
-                        <input aria-describedby="emailHelp" class="form-control" id="exampleInputEmail1" type="email">
-                    </div>
-                    <div class="form-group col">
-                        <label for="exampleInputPassword1">Discount :-</label>
-                        <input class="form-control" id="exampleInputPassword1" type="password">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Balance :-</label>
-                    <input class="form-control" id="exampleInputPassword1" type="password">
-                </div>
-
-                <button class="btn btn-success m-2 align-content-center" type="submit">Purchase</button>
-            </form>
-        </div>
-
-
-    </section>
-
-
-    <div class="mt-5">
-        <table class="table bg-white">
-            <thead class="thead-light">
-            <tr>
-                <th scope="col">Item Code</th>
-                <th scope="col">Item Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Total</th>
-            </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
     </div>
 </section>
 
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/bootstrap.bundle.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="controller/CustomerController.js"></script>
+<script src="controller/ItemController.js"></script>
+<script src="model/CustomerDTO.js"></script>
+<script src="model/ItemDTO.js"></script>
 <script src="db/DB.js"></script>
 
 <script>
@@ -448,7 +602,7 @@
 
     });
 
-    $("#linkOrder").click(function () {
+    $(".link-Order").click(function () {
         $("#dashboardContent").css("display", "none");
         $("#customerContent").css("display", "none");
         $("#itemContent").css("display", "none");
@@ -461,577 +615,6 @@
         $("#itemContent").css("display", "none");
         $("#orderContent").css("display", "none");
     });
-
-/*
-    $("#btnSave").click(function () {
-        saveCustomer();
-        clearAll();
-        loadAllCustomers();
-/!*
-        $("#customerTable>tr").off("click");
-
-        let customerId = $("#txtId").val();
-        let customerName = $("#txtName").val();
-        let customerTp = $("#txtTp").val();
-        let customerSalary = $("#txtSalary").val();
-
-        let row = `<tr><td>${customerId}</td><td>${customerName}</td><td>${customerTp}</td><td>${customerSalary}</td></tr>`
-*!/
-
-/!*        $("#customerTable").append(row);
-        $("#customerTable>tr").click(function () {
-            //console.log(this);
-
-            let custId = $(this).children(":eq(0)").text();
-            let custName = $(this).children(":eq(1)").text();
-            let custTp = $(this).children(":eq(2)").text();
-            let custSalary = $(this).children(":eq(3)").text();
-
-            console.log(custId, custName, custTp, custSalary);
-
-            $("#txtId").val(custId);
-            $("#txtName").val(custName);
-            $("#txtTp").val(custTp);
-            $("#txtSalary").val(custSalary);
-        });*!/
-
-    });
-
-    function saveCustomer() {
-        //gather customer information
-        let customerID = $("#txtId").val();
-        let customerName = $("#txtName").val();
-        let customerTp = $("#txtTp").val();
-        let customerSalary = $("#txtSalary").val();
-
-        //create Object
-        var customerObject = {
-            id: customerID,
-            name: customerName,
-            tp: customerTp,
-            salary: customerSalary
-        };
-
-        customerDB.push(customerObject);
-    }
-    var regExCusId = /^(C00-)[0-9]{3,4}$/;
-    var regExCusName = /^[A-z]{3,}$/;
-    var regExCusTp = /^(077-|071-|070-|074-|078-)[0-9]{7}$/;
-    var regExCusSalary = /^[1-9]{4,}$/;
-
-    $("#txtId").keyup(function () {
-            let input = $("#txtId").val();
-            if (regExCusId.test(input)){
-                $("#txtId").css('border', '4px solid green');
-                $("#error").text("");
-                $("#txtName").focus();
-            }else{
-                $("#txtId").css('border', '4px solid red');
-                $("#error").text("Wrong format : C00-001");
-            }
-        });
-    $("#txtName").keyup(function () {
-        let input = $("#txtName").val();
-        if (regExCusName.test(input)){
-            $("#txtName").css('border', '4px solid green');
-            $("#error1").text("");
-            $("#txtTp").focus();
-        }else{
-            $("#txtName").css('border', '4px solid red');
-            $("#error1").text("Wrong format : only letters");
-        }
-    });
-    $("#txtTp").keyup(function () {
-        let input = $("#txtTp").val();
-        if (regExCusTp.test(input)){
-            $("#txtTp").css('border', '4px solid green');
-            $("#error2").text("");
-            $("#txtSalary").focus();
-        }else{
-            $("#txtTp").css('border', '4px solid red');
-            $("#error2").text("Wrong format : 077-3456789");
-        }
-    });
-    $("#txtSalary").keyup(function () {
-        let input = $("#txtSalary").val();
-        if (regExCusSalary.test(input)){
-            $("#txtSalary").css('border', '4px solid green');
-            $("#error3").text("");
-            $("#btnSave").focus();
-        }else{
-            $("#txtSalary").css('border', '4px solid red');
-            $("#error3").text("Wrong format : only numbers");
-        }
-    });
-
-
-    $("#txtId").on('keyup', function (eventOb) {
-        setButton();
-        if (eventOb.key == "Enter") {
-            checkIfValid();
-        }
-
-        if (eventOb.key == "Control") {
-            var typedCustomerID = $("#txtId").val();
-            var srcCustomer = searchCustomerFromID(typedCustomerID);
-            $("#txtId").val(srcCustomer.getCustomerID());
-            $("#txtName").val(srcCustomer.getCustomerName());
-            $("#txtTp").val(srcCustomer.getCustomerTp());
-            $("#txtSalary").val(srcCustomer.getCustomerSalary());
-        }
-    });
-
-
-
-    $("#txtName").on('keyup', function (eventOb) {
-        setButton();
-        if (eventOb.key == "Enter") {
-            checkIfValid();
-        }
-    });
-
-    $("#txtTp").on('keyup', function (eventOb) {
-        setButton();
-        if (eventOb.key == "Enter") {
-            checkIfValid();
-        }
-    });
-
-    $("#txtSalary").on('keyup', function (eventOb) {
-        setButton();
-        if (eventOb.key == "Enter") {
-            checkIfValid();
-        }
-    });
-    // focusing events end
-    $("#btnSave").attr('disabled', true);
-
-    function setButton() {
-        let b = formValid();
-        if (b) {
-            $("#btnSave").attr('disabled', false);
-        } else {
-            $("#btnSave").attr('disabled', true);
-        }
-    }
-
-    function loadAllCustomers() {
-        $("#customerTable").empty();
-        for (var i of customerDB) {
-            let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.salary}</td></tr>`;
-            $("#customerTable").append(row);
-        }
-    }
-
-    function clearAll() {
-        $('#txtId,#txtName,#txtTp,#txtSalary').val("");
-        $('#txtId,#txtName,#txtTp,#txtSalary').css('border', '2px solid #ced4da');
-        $('#txtId').focus();
-        $("#btnSave").attr('disabled', true);
-        loadAllCustomers();
-     /!*   $("#lblcusid,#lblcusname,#lblcusaddress,#lblcussalary").text("");*!/
-    }
-
-    function checkIfValid() {
-        var cusID = $("#txtId").val();
-        if (regExCusId.test(cusID)) {
-            $("#txtName").focus();
-            var cusName = $("#txtName").val();
-            if (regExCusName.test(cusName)) {
-                $("#txtTp").focus();
-                var cusTp = $("#txtTp").val();
-                if (regExCusTp.test(cusTp)) {
-                    $("#txtSalary").focus();
-                    var cusSalary = $("#txtSalary").val();
-                    var resp = regExCusSalary.test(cusSalary);
-                    if (resp) {
-                        let res = confirm("Do you really need to add this Customer..?");
-                        if (res) {
-                            saveCustomer();
-                            clearAll();
-                        }
-                    } else {
-                        $("#txtSalary").focus();
-                    }
-                } else {
-                    $("#txtTp").focus();
-                }
-            } else {
-                $("#txtName").focus();
-            }
-        } else {
-            $("#txtId").focus();
-        }
-    }
-
-    function setButton() {
-        let b = formValid();
-        if (b) {
-            $("#btnSave").attr('disabled', false);
-        } else {
-            $("#btnSave").attr('disabled', true);
-        }
-    }
-
-    $('#btnSave').click(function () {
-        checkIfValid();
-    });
-*/
-
-/*
-    $("#txtId").keydown(function (event) {
-        if (event.key == "Enter") {
-            $("#txtName").focus();
-        }
-    });
-    $("#txtName").keydown(function (event) {
-        if (event.key == "Enter") {
-            $("#txtTp").focus();
-        }
-    });
-    $("#txtTp").keydown(function (event) {
-        if (event.key == "Enter") {
-            $("#txtSalary").focus();
-        }
-    });
-    $("#txtSalary").keydown(function (event) {
-        if (event.key == "Enter") {
-            $("#btnSave").focus();
-        }
-    });*/
-
-
-    $("#btnSave").click(function () {
-        saveCustomer();
-        clearAll();
-        loadAllCustomers();
-    });
-
-    // search customer
-    $("#btnSearch").click(function () {
-        var searchID = $("#txtSearchCusID").val();
-
-        var response = searchCustomer(searchID);
-        if (response) {
-            $("#txtId").val(response.id);
-            $("#txtName").val(response.name);
-            $("#txtTp").val(response.tp);
-            $("#txtSalary").val(response.salary);
-        }else{
-            clearAll();
-            alert("No Such a Customer");
-        }
-    });
-
-    // Events end
-
-
-    // CRUD OPERATIONS START
-    function loadAllCustomers() {
-        $("#customerTable").empty();
-        for (var i of customerDB) {
-            /*create a html row*/
-            let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.tp}</td><td>${i.salary}</td></tr>`;
-            /*select the table body and append the row */
-            $("#customerTable").append(row);
-        }
-    }
-
-    function saveCustomer() {
-        //gather customer information
-        let customerID = $("#txtId").val();
-        let customerName = $("#txtName").val();
-        let customerTp = $("#txtTp").val();
-        let customerSalary = $("#txtSalary").val();
-
-        //create Object
-        var customerObject = {
-            id: customerID,
-            name: customerName,
-            tp: customerTp,
-            salary: customerSalary
-        };
-
-        customerDB.push(customerObject);
-    }
-
-    function searchCustomer(id) {
-        for (let i = 0; i < customerDB.length; i++) {
-            if (customerDB[i].id == id) {
-                return customerDB[i];
-            }
-        }
-    }
-
-    function deleteCustomer(){
-        //write the code
-    }
-
-    function updateCustomer(){
-        //write the code
-    }
-
-    // CRUD OPERATIONS ENDED
-
-
-    //validation started
-    // customer regular expressions
-    const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
-    const cusNameRegEx = /^[A-z ]{5,20}$/;
-    const cusTpRegEx = /^[0-9/A-z. ,]{7,}$/;
-    const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
-
-
-    $('#txtId,#txtName,#txtTp,#txtSalary').on('keydown', function (eventOb) {
-        if (eventOb.key == "Tab") {
-            eventOb.preventDefault(); // stop execution of the button
-        }
-    });
-
-    $('#txtId,#txtName,#txtTp,#txtSalary').on('blur', function () {
-        formValid();
-    });
-
-    //focusing events
-    $("#txtId").on('keyup', function (eventOb) {
-        setButton();
-        if (eventOb.key == "Enter") {
-            checkIfValid();
-        }
-
-        if (eventOb.key == "Control") {
-            var typedCustomerID = $("#txtId").val();
-            var srcCustomer = searchCustomerFromID(typedCustomerID);
-            $("#txtId").val(srcCustomer.getCustomerID());
-            $("#txtName").val(srcCustomer.getCustomerName());
-            $("#txtTp").val(srcCustomer.getCustomerTp());
-            $("#txtSalary").val(srcCustomer.getCustomerSalary());
-        }
-
-
-    });
-
-    $("#txtName").on('keyup', function (eventOb) {
-        setButton();
-        if (eventOb.key == "Enter") {
-            checkIfValid();
-        }
-    });
-
-    $("#txtTp").on('keyup', function (eventOb) {
-        setButton();
-        if (eventOb.key == "Enter") {
-            checkIfValid();
-        }
-    });
-
-    $("#txtSalary").on('keyup', function (eventOb) {
-        setButton();
-        if (eventOb.key == "Enter") {
-            checkIfValid();
-        }
-    });
-    // focusing events end
-    $("#btnSave").attr('disabled', true);
-
-    function clearAll() {
-        $('#txtId,#txtName,#txtTp,#txtSalary').val("");
-        $('#txtId,#txtName,#txtTp,#txtSalary').css('border', '2px solid #ced4da');
-        $('#txtId').focus();
-        $("#btnSave").attr('disabled', true);
-        loadAllCustomers();
-        $("#lblcusid,#lblcusname,#lblcusaddress,#lblcussalary").text("");
-    }
-
-    function formValid() {
-        var cusID = $("#txtId").val();
-        $("#txtId").css('border', '2px solid green');
-        $("#lblcusid").text("");
-        if (cusIDRegEx.test(cusID)) {
-            var cusName = $("#txtName").val();
-            if (cusNameRegEx.test(cusName)) {
-                $("#txtName").css('border', '2px solid green');
-                $("#lblcusname").text("");
-                var cusTp = $("#txtTp").val();
-                if (cusTpRegEx.test(cusTp)) {
-                    var cusSalary = $("#txtSalary").val();
-                    var resp = cusSalaryRegEx.test(cusSalary);
-                    $("#txtTp").css('border', '2px solid green');
-                    $("#lblcustp").text("");
-                    if (resp) {
-                        $("#txtSalary").css('border', '2px solid green');
-                        $("#lblcussalary").text("");
-                        return true;
-                    } else {
-                        $("#txtSalary").css('border', '2px solid red');
-                        $("#lblcussalary").text("Cus Salary is a required field : Pattern 100.00 or 100");
-                        return false;
-                    }
-                } else {
-                    $("#txtTp").css('border', '2px solid red');
-                    $("#lblcustp").text("Cus Tp is a required field : Mimum 7");
-                    return false;
-                }
-            } else {
-                $("#txtName").css('border', '2px solid red');
-                $("#lblcusname").text("Cus Name is a required field : Mimimum 5, Max 20, Spaces Allowed");
-                return false;
-            }
-        } else {
-            $("#txtId").css('border', '2px solid red');
-            $("#lblcusid").text("Cus ID is a required field : Pattern C00-000");
-            return false;
-        }
-    }
-
-    function checkIfValid() {
-        var cusID = $("#txtId").val();
-        if (cusIDRegEx.test(cusID)) {
-            $("#txtName").focus();
-            var cusName = $("#txtName").val();
-            if (cusNameRegEx.test(cusName)) {
-                $("#txtTp").focus();
-                var cusTp = $("#txtTp").val();
-                if (cusTpRegEx.test(cusTp)) {
-                    $("#txtSalary").focus();
-                    var cusSalary = $("#txtSalary").val();
-                    var resp = cusSalaryRegEx.test(cusSalary);
-                    if (resp) {
-                        let res = confirm("Do you really need to add this Customer..?");
-                        if (res) {
-                            saveCustomer();
-                            clearAll();
-                        }
-                    } else {
-                        $("#txtSalary").focus();
-                    }
-                } else {
-                    $("#txtTp").focus();
-                }
-            } else {
-                $("#txtName").focus();
-            }
-        } else {
-            $("#txtId").focus();
-        }
-    }
-
-    function setButton() {
-        let b = formValid();
-        if (b) {
-            $("#btnSave").attr('disabled', false);
-        } else {
-            $("#btnSave").attr('disabled', true);
-        }
-    }
-
-    $('#btnSave').click(function () {
-        checkIfValid();
-    });
-    //validation ended
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    $("#btnSaveAndUpdate").click(function () {
-
-        $("#itemContent>tr").off("click");
-
-        let itemCode = $("#txtCode").val();
-        let itemName = $("#txtItemName").val();
-        let itemQuantity = $("#txtQuantity").val();
-        let itemPrice = $("#txtPrice").val();
-
-        let row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemQuantity}</td><td>${itemPrice}</td></tr>`;
-        $("#itemTable").append(row);
-
-
-        $("#itemTable>tr").click(function () {
-            // console.log(this);
-
-            let itmCode = $(this).children(":eq(0)").text();
-            let itmName = $(this).children(":eq(1)").text();
-            let itmQuantity = $(this).children(":eq(2)").text();
-            let itmPrice = $(this).children(":eq(3)").text();
-
-            console.log(itmCode, itmName, itmQuantity, itmPrice);
-
-            $("#txtCode").val(itmCode);
-            $("#txtItemName").val(itemName);
-            $("#txtQuantity").val(itemQuantity);
-            $("#txtPrice").val(itmPrice);
-
-        });
-
-    });
-
-    var regExItemCode = /^(I00-)[0-9]{3,4}$/;
-    $("#txtCode").keyup(function () {
-        let input = $("#txtCode").val();
-        if (regExItemCode.test(input)){
-            $("#txtCode").css('border', '4px solid green');
-            $("#error").text("");
-            $("#txtItemName").focus();
-        }else{
-            $("#txtCode").css('border', '4px solid red');
-            $("#error").text("Wrong format : I00-001");
-        }
-    });
-
-    var regExItemName = /^[A-z]{3,}$/;
-    $("#txtItemName").keyup(function () {
-        let input = $("#txtItemName").val();
-        if (regExItemName.test(input)){
-            $("#txtItemName").css('border', '4px solid green');
-            $("#error1").text("");
-            $("#txtQuantity").focus();
-        }else{
-            $("#txtItemName").css('border', '4px solid red');
-            $("#error1").text("Wrong format : only letters");
-        }
-    });
-
-    var regExItemQuntity = /^[1-9]{1,}$/;
-    $("#txtQuantity").keyup(function () {
-        let input = $("#txtQuantity").val();
-        if (regExItemQuntity.test(input)){
-            $("#txtQuantity").css('border', '4px solid green');
-            $("#error2").text("");
-            $("#txtPrice").focus();
-        }else{
-            $("#txtQuantity").css('border', '4px solid red');
-            $("#error2").text("Wrong format : 1, 2, 10, 100");
-        }
-    });
-
-    var regExItemPrice = /^[1-9]{4,}$/;
-    $("#txtPrice").keyup(function () {
-        let input = $("#txtPrice").val();
-        if (regExItemPrice.test(input)){
-            $("#txtPrice").css('border', '4px solid green');
-            $("#error3").text("");
-            $("#btnSaveAndUpdate").focus();
-        }else{
-            $("#txtPrice").css('border', '4px solid red');
-            $("#error3").text("Wrong format : only letters");
-        }
-    });
-
-
-
 
 
 </script>

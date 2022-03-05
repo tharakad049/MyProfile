@@ -8,7 +8,7 @@
 
     <style>
         section > section > div:nth-child(1) > form > nav {
-            background-color: #25b101;
+            background-color: #344a86;
         }
 
         section > div > table > thead {
@@ -481,3 +481,334 @@
 </script>
 </body>
 </html>
+
+
+<!--<section class="container-fluid" id="customerContent">
+    <section class="row mt-5">
+        <div class="col-md-4">
+            <form class="bg-white">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">Search Customer</a>
+                    </div>
+                </nav>
+                <div class="form-group ">
+                    <label for="txtSearchCusID">Customer Name :-</label>
+                    <input class="form-control" id="txtSearchCusID" type="text">
+                </div>
+
+                <button class="btn btn-success m-3" id="btnSearch" type="button">Search</button>
+
+            </form>
+
+            <button class="btn btn-danger mt-5" type="button">Delete</button>
+            <button class="btn btn-primary mt-5" type="button">Details</button>
+            <button class="btn btn-success mt-5" type="button">Clear</button>
+        </div>
+
+        <div class="col-md-6">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container">
+                    <a class="navbar-brand" href="#">New Customer</a>
+                </div>
+
+            </nav>
+            <form class="bg-white">
+
+                <div class="form-group ">
+                    <label for="txtId">Customer Id :-</label>
+                    <input class="form-control" id="txtId" placeholder="Customer ID" type="text">
+                    <p><small class="text-danger pl-1" id="error"></small></p>
+                </div>
+
+                <div class="form-group ">
+                    <label for="txtName">Customer Name :-</label>
+                    <input class="form-control" id="txtName" placeholder="Customer Name" type="text">
+                    <p><small class="text-danger pl-1" id="error1"></small></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="txtTp">Customer Tp :-</label>
+                    <input class="form-control" id="txtTp" placeholder="Customer Tp" type="text">
+                    <p><small class="text-danger pl-1" id="error2"></small></p>
+                </div>
+                <div class="form-group ">
+                    <label for="txtSalary">Customer Salary :-</label>
+                    <input class="form-control" id="txtSalary" placeholder="Customer Salary" type="text">
+                    <p><small class="text-danger pl-1" id="error3"></small></p>
+                </div>
+
+                <button class="btn btn-danger mt-4" id="btnSave" type="button">Save</button>
+                <button class="btn btn-warning mt-4" type="button">Renew</button>
+                <button class="btn btn-primary mt-4" type="button">Close</button>
+            </form>
+        </div>
+
+    </section>
+
+    <div class="mt-5 bg-white">
+        <table class="table">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">Customer Id</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">TP</th>
+                <th scope="col">Salary</th>
+            </tr>
+            </thead>
+            <tbody id="customerTable"></tbody>
+        </table>
+    </div>
+
+</section>-->
+
+<!--
+/*
+$("#btnSave").click(function () {
+saveCustomer();
+clearAll();
+loadAllCustomers();
+/!*
+$("#customerTable>tr").off("click");
+
+let customerId = $("#txtId").val();
+let customerName = $("#txtName").val();
+let customerTp = $("#txtTp").val();
+let customerSalary = $("#txtSalary").val();
+
+let row = `
+<tr>
+    <td>${customerId}</td>
+    <td>${customerName}</td>
+    <td>${customerTp}</td>
+    <td>${customerSalary}</td>
+</tr>`
+*!/
+
+/!*        $("#customerTable").append(row);
+$("#customerTable>tr").click(function () {
+//console.log(this);
+
+let custId = $(this).children(":eq(0)").text();
+let custName = $(this).children(":eq(1)").text();
+let custTp = $(this).children(":eq(2)").text();
+let custSalary = $(this).children(":eq(3)").text();
+
+console.log(custId, custName, custTp, custSalary);
+
+$("#txtId").val(custId);
+$("#txtName").val(custName);
+$("#txtTp").val(custTp);
+$("#txtSalary").val(custSalary);
+});*!/
+
+});
+
+function saveCustomer() {
+//gather customer information
+let customerID = $("#txtId").val();
+let customerName = $("#txtName").val();
+let customerTp = $("#txtTp").val();
+let customerSalary = $("#txtSalary").val();
+
+//create Object
+var customerObject = {
+id: customerID,
+name: customerName,
+tp: customerTp,
+salary: customerSalary
+};
+
+customerDB.push(customerObject);
+}
+var regExCusId = /^(C00-)[0-9]{3,4}$/;
+var regExCusName = /^[A-z]{3,}$/;
+var regExCusTp = /^(077-|071-|070-|074-|078-)[0-9]{7}$/;
+var regExCusSalary = /^[1-9]{4,}$/;
+
+$("#txtId").keyup(function () {
+let input = $("#txtId").val();
+if (regExCusId.test(input)){
+$("#txtId").css('border', '4px solid green');
+$("#error").text("");
+$("#txtName").focus();
+}else{
+$("#txtId").css('border', '4px solid red');
+$("#error").text("Wrong format : C00-001");
+}
+});
+$("#txtName").keyup(function () {
+let input = $("#txtName").val();
+if (regExCusName.test(input)){
+$("#txtName").css('border', '4px solid green');
+$("#error1").text("");
+$("#txtTp").focus();
+}else{
+$("#txtName").css('border', '4px solid red');
+$("#error1").text("Wrong format : only letters");
+}
+});
+$("#txtTp").keyup(function () {
+let input = $("#txtTp").val();
+if (regExCusTp.test(input)){
+$("#txtTp").css('border', '4px solid green');
+$("#error2").text("");
+$("#txtSalary").focus();
+}else{
+$("#txtTp").css('border', '4px solid red');
+$("#error2").text("Wrong format : 077-3456789");
+}
+});
+$("#txtSalary").keyup(function () {
+let input = $("#txtSalary").val();
+if (regExCusSalary.test(input)){
+$("#txtSalary").css('border', '4px solid green');
+$("#error3").text("");
+$("#btnSave").focus();
+}else{
+$("#txtSalary").css('border', '4px solid red');
+$("#error3").text("Wrong format : only numbers");
+}
+});
+
+
+$("#txtId").on('keyup', function (eventOb) {
+setButton();
+if (eventOb.key == "Enter") {
+checkIfValid();
+}
+
+if (eventOb.key == "Control") {
+var typedCustomerID = $("#txtId").val();
+var srcCustomer = searchCustomerFromID(typedCustomerID);
+$("#txtId").val(srcCustomer.getCustomerID());
+$("#txtName").val(srcCustomer.getCustomerName());
+$("#txtTp").val(srcCustomer.getCustomerTp());
+$("#txtSalary").val(srcCustomer.getCustomerSalary());
+}
+});
+
+
+$("#txtName").on('keyup', function (eventOb) {
+setButton();
+if (eventOb.key == "Enter") {
+checkIfValid();
+}
+});
+
+$("#txtTp").on('keyup', function (eventOb) {
+setButton();
+if (eventOb.key == "Enter") {
+checkIfValid();
+}
+});
+
+$("#txtSalary").on('keyup', function (eventOb) {
+setButton();
+if (eventOb.key == "Enter") {
+checkIfValid();
+}
+});
+// focusing events end
+$("#btnSave").attr('disabled', true);
+
+function setButton() {
+let b = formValid();
+if (b) {
+$("#btnSave").attr('disabled', false);
+} else {
+$("#btnSave").attr('disabled', true);
+}
+}
+
+function loadAllCustomers() {
+$("#customerTable").empty();
+for (var i of customerDB) {
+let row = `
+<tr>
+    <td>${i.id}</td>
+    <td>${i.name}</td>
+    <td>${i.address}</td>
+    <td>${i.salary}</td>
+</tr>`;
+$("#customerTable").append(row);
+}
+}
+
+function clearAll() {
+$('#txtId,#txtName,#txtTp,#txtSalary').val("");
+$('#txtId,#txtName,#txtTp,#txtSalary').css('border', '2px solid #ced4da');
+$('#txtId').focus();
+$("#btnSave").attr('disabled', true);
+loadAllCustomers();
+/!*   $("#lblcusid,#lblcusname,#lblcusaddress,#lblcussalary").text("");*!/
+}
+
+function checkIfValid() {
+var cusID = $("#txtId").val();
+if (regExCusId.test(cusID)) {
+$("#txtName").focus();
+var cusName = $("#txtName").val();
+if (regExCusName.test(cusName)) {
+$("#txtTp").focus();
+var cusTp = $("#txtTp").val();
+if (regExCusTp.test(cusTp)) {
+$("#txtSalary").focus();
+var cusSalary = $("#txtSalary").val();
+var resp = regExCusSalary.test(cusSalary);
+if (resp) {
+let res = confirm("Do you really need to add this Customer..?");
+if (res) {
+saveCustomer();
+clearAll();
+}
+} else {
+$("#txtSalary").focus();
+}
+} else {
+$("#txtTp").focus();
+}
+} else {
+$("#txtName").focus();
+}
+} else {
+$("#txtId").focus();
+}
+}
+
+function setButton() {
+let b = formValid();
+if (b) {
+$("#btnSave").attr('disabled', false);
+} else {
+$("#btnSave").attr('disabled', true);
+}
+}
+
+$('#btnSave').click(function () {
+checkIfValid();
+});
+*/
+
+/*
+$("#txtId").keydown(function (event) {
+if (event.key == "Enter") {
+$("#txtName").focus();
+}
+});
+$("#txtName").keydown(function (event) {
+if (event.key == "Enter") {
+$("#txtTp").focus();
+}
+});
+$("#txtTp").keydown(function (event) {
+if (event.key == "Enter") {
+$("#txtSalary").focus();
+}
+});
+$("#txtSalary").keydown(function (event) {
+if (event.key == "Enter") {
+$("#btnSave").focus();
+}
+});*/
+-->
