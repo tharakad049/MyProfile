@@ -1,4 +1,3 @@
-
 $("#btnSave").click(function () {
     saveCustomer();
     clearAll();
@@ -41,9 +40,7 @@ function updateCustomer() {
 function loadAllCustomers() {
     $("#customerTable").empty();
     for (var i of customerDB) {
-        /*create a html row*/
         let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.tp}</td><td>${i.salary}</td></tr>`;
-        /*select the table body and append the row */
         $("#customerTable").append(row);
     }
 }
@@ -60,7 +57,6 @@ function clearAll() {
 // search customer
 $("#btnSearch").click(function () {
     var searchID = $("#txtSearchCusID").val();
-
     var response = searchCustomer(searchID);
     if (response) {
         $("#txtId").val(response.id);
@@ -81,7 +77,7 @@ const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
 $('#txtId,#txtName,#txtTp,#txtSalary').on('keydown', function (eventOb) {
     if (eventOb.key == "Tab") {
-        eventOb.preventDefault(); // stop execution of the button
+        eventOb.preventDefault();
     }
 });
 
@@ -98,7 +94,7 @@ $("#txtId").on('keyup', function (eventOb) {
 
     if (eventOb.key == "Control") {
         var typedCustomerID = $("#txtId").val();
-        var srcCustomer = searchCustomerFromID(typedCustomerID);
+        var srcCustomer = searchCustomerFromId(typedCustomerID);
         $("#txtId").val(srcCustomer.getCustomerID());
         $("#txtName").val(srcCustomer.getCustomerName());
         $("#txtTp").val(srcCustomer.getCustomerTp());
