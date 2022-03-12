@@ -41,14 +41,16 @@ $("#btnUpdate").click(function () {
     for (var i in customerDB){
         if ($("#txtId").val()==customerDB[i].id){
 
-            var name=$(" #txtName").val();
-            var tp=$(" #txtTp").val();
-            var salary=$(" #txtSalary").val();
+            $("#txtName").val();
+            $("#txtTp").val();
+            $("#txtSalary").val();
 
-            customerDB[i].setName(name);
-            customerDB[i].setTp(tp);
-            customerDB[i].setSalary(salary);
+            customerDB[i].name;
+            customerDB[i].tp;
+            customerDB[i].salary;
 
+            clearAll();
+            generateCustomerId();
             loadAllCustomers();
             alert("Customer Update complete");
             break;
@@ -111,6 +113,15 @@ function clearAll() {
     loadAllCustomers();
     $("#lblcusid,#lblcusname,#lblcusaddress,#lblcussalary").text("");
 }
+
+$("#btnClose").click(function () {
+    $('#txtId,#txtName,#txtTp,#txtSalary').val("");
+    $('#txtId,#txtName,#txtTp,#txtSalary').css('border', '2px solid #ced4da');
+    $('#txtId').focus();
+    $("#btnSave").attr('disabled', true);
+    loadAllCustomers();
+    $("#lblcusid,#lblcusname,#lblcusaddress,#lblcussalary").text("");
+});
 
 // search customer
 $("#btnSearch").click(function () {

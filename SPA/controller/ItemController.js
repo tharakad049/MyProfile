@@ -63,15 +63,19 @@ function searchItem(id) {
 $("#btnUpdated").click(function () {
     for (var i in itemDB){
         if ($("#txtCode").val()==itemDB[i].code){
+            $("#btnSave").attr('disabled', true);
+            $("#txtItemName").val();
+            $("#txtQuantity").val();
+            $("#txtPrice").val();
 
-            var name=$(" #txtItemName").val();
-            var qty=$(" #txtQuantity").val();
-            var price=$(" #txtPrice").val();
+            itemDB[i].name;
+            itemDB[i].qty;
+            itemDB[i].price;
 
-            itemDB[i].setName(name);
-            itemDB[i].setQty(qty);
-            itemDB[i].setPrice(price);
-
+            $("#btnSave").attr('disabled', true);
+            clearAllItems();
+            generateItemCode();
+            updateItem();
             loadAllItems();
             alert("Item Update complete");
             break;
@@ -86,6 +90,7 @@ function updateItem(){
         $(" #txtItemName").val($(this).children(':eq(1)').text());
         $(" #txtQuantity").val($(this).children(':eq(2)').text());
         $(" #txtPrice").val($(this).children(':eq(3)').text());
+        $("#btnSave").attr('disabled', true);
     });
     $("#btnSave").attr('disabled', true);
 }
@@ -97,6 +102,15 @@ function loadAllItems() {
         $("#itemTable").append(row);
     }
 }
+
+$("#btnClosed").click(function () {
+    $('#txtCode,#txtItemName,#txtQuantity,#txtPrice').val("");
+    $('#txtCode,#txtItemName,#txtQuantity,#txtPrice').css('border', '2px solid #ced4da');
+    $('#txtCode').focus();
+    $("#btnSaveAndUpdate").attr('disabled', true);
+    loadAllItems();
+    $("#lblItemCode,#lblItemName,#lblItemQuantity,#lblItemPrice").text("");
+});
 
 function clearAllItems() {
     $('#txtCode,#txtItemName,#txtQuantity,#txtPrice').val("");
@@ -122,7 +136,7 @@ $("#btnsearch").click(function () {
     }
 });
 
-const itemCodeRegEx = /^(I00)[0-9]{1,3}$/;
+const itemCodeRegEx = /^(I00-)[0-9]{1,3}$/;
 const itemNameRegEx = /^[A-z ]{3,20}$/;
 const itemQuantityRegEx = /^[0-9/A-z. ,]{1,}$/;
 const itemPriceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;

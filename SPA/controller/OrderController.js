@@ -1,3 +1,11 @@
+$("#orderCustomerName").attr('disabled', true);
+$("#orderCustomerTp").attr('disabled', true);
+$("#orderCustomerSalary").attr('disabled', true);
+
+$("#txtSelectItemDescription").attr('disabled', true);
+$("#txtSelectItemPrice").attr('disabled', true);
+$("#txtSelectQTYOnHand").attr('disabled', true);
+
 $("#txtSelectItemCode").on('keyup',function (e) {
     console.log(e.key);
     var existItem=0;
