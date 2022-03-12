@@ -61,7 +61,6 @@ $("#btnAddToTable").click(function () {
 
 function loadCart(){
     var total=0;
-
     $("#orderTable").empty();
     cartItems.forEach(function (i) {
         let row = `<tr><td>${i.getItemCode()}</td><td>${i.getItemName()}</td><td>${i.getItemQty()}</td><td>${i.getItemPrice()}</td><td>${i.getTotalItemPrice()}</td></tr>`;
@@ -123,10 +122,10 @@ $("#btnOrderCusSearch").click(function () {
 
     var customerExist=0
     for (var i in customerDB){
-        if (id==customerDB[i].getId()){
-            $("#orderCustomerName").val(customerDB[i].getName());
-            $("#orderCustomerTp").val(customerDB[i].getTp());
-            $("#orderCustomerSalary").val(customerDB[i].getSalary());
+        if (id==customerDB[i].id){
+            $("#orderCustomerName").val(customerDB[i].name);
+            $("#orderCustomerTp").val(customerDB[i].tp);
+            $("#orderCustomerSalary").val(customerDB[i].salary);
             customerExist=1;
             break;
         }
