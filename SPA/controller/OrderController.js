@@ -5,6 +5,9 @@ $("#txtSelectItemCode").on('keyup',function (e) {
         var itemCode = $("#txtSelectItemCode").val();
 
         for (var i in itemDB) {
+            $("#txtSelectItemDescription").attr('disabled', true);
+            $("#txtSelectItemPrice").attr('disabled', true);
+            $("#txtSelectQTYOnHand").attr('disabled', true);
             if (itemCode == itemDB[i].code) {
                 $("#txtSelectItemDescription").val(itemDB[i].iName);
                 $("#txtSelectItemPrice").val(itemDB[i].price);
@@ -26,7 +29,6 @@ $("#txtSelectItemCode").on('keyup',function (e) {
 
 
 $("#btnAddToTable").click(function () {
-
     var itemCode= $("#txtSelectItemCode").val();
     var itemName= $("#txtSelectItemDescription").val();
     var itemPrice= $("#txtSelectItemPrice").val();
@@ -123,6 +125,10 @@ $("#btnOrderCusSearch").click(function () {
     var customerExist=0
     for (var i in customerDB){
         if (id==customerDB[i].id){
+            $("#orderCustomerName").attr('disabled', true);
+            $("#orderCustomerTp").attr('disabled', true);
+            $("#orderCustomerSalary").attr('disabled', true);
+
             $("#orderCustomerName").val(customerDB[i].name);
             $("#orderCustomerTp").val(customerDB[i].tp);
             $("#orderCustomerSalary").val(customerDB[i].salary);
