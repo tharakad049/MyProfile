@@ -126,7 +126,7 @@ $("#btnOrderCusSearch").click(function () {
         if (id==customerDB[i].getId()){
             $("#orderCustomerName").val(customerDB[i].getName());
             $("#orderCustomerTp").val(customerDB[i].getTp());
-            $("#orderCustomerAddress").val(customerDB[i].getAddress());
+            $("#orderCustomerSalary").val(customerDB[i].getSalary());
             customerExist=1;
             break;
         }
