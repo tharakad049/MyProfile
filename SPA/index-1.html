@@ -196,9 +196,9 @@
                             </form>
                         </div>
                     </div>
-                    <button class="btn btn-danger mt-5" type="button">Delete</button>
-                    <button class="btn btn-primary mt-5" type="button">Details</button>
-                    <button class="btn btn-success mt-5" type="button">Clear</button>
+                    <button class="btn btn-danger mt-5" id="customerDelete" type="button">Delete</button>
+<!--                    <button class="btn btn-primary mt-5" type="button">Details</button>
+                    <button class="btn btn-success mt-5" type="button">Clear</button>-->
                 </div>
                 <div class="col-lg-5 mt-lg-0 mt-3">
                     <div class="card">
@@ -242,7 +242,7 @@
                                 </div>
                                 <div class="form-group text-right">
                                     <button class="btn btn-danger col-12 col-sm-auto mt-1" id="btnSave" type="button">Save</button>
-                                    <button class="btn btn-warning col-12 col-sm-auto mt-1" type="button">Renew</button>
+                                    <button class="btn btn-warning col-12 col-sm-auto mt-1" id="btnUpdate" type="button">Renew</button>
                                     <button class="btn btn-primary col-12 col-sm-auto mt-1" type="button">Close</button>
                                 </div>
                             </form>
@@ -445,34 +445,26 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label>Item :</label>
-                                            <select class="form-control" id="selectItemCode"></select>
-                                            <span class="control-error"
-                                                  id="item-empty-error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
                                             <label>Item Code :-</label>
-                                            <input class="form-control" id="txtItemCode" type="text">
+                                            <input class="form-control" id="txtSelectItemCode" type="text">
                                         </div>
                                     </div>
                                     <div class="col-5">
                                         <div class="form-group">
                                             <label>Item Name :-</label>
-                                            <input class="form-control" id="txtItemDescription" type="text">
+                                            <input class="form-control" id="txtSelectItemDescription" type="text">
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="form-group">
                                             <label class="">Price :-</label>
-                                            <input class="form-control" id="txtItemPrice" type="text">
+                                            <input class="form-control" id="txtSelectItemPrice" type="text">
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-group">
                                             <label class="">QtyOnH :-</label>
-                                            <input class="form-control" id="txtQTYOnHand" type="text">
+                                            <input class="form-control" id="txtSelectQTYOnHand" type="text">
                                         </div>
                                     </div>
                                     <hr class="mt-4">
@@ -555,8 +547,8 @@
                     <tr>
                         <th>Item Code</th>
                         <th>Item Name</th>
-                        <th>Price</th>
                         <th>Quantity</th>
+                        <th>Price</th>
                         <th>Total</th>
                     </tr>
                     </thead>
@@ -565,18 +557,23 @@
                     </tbody>
                 </table>
             </div>
---
         </div>
     </div>
 </section>
 
-
 <script src="assets/js/bootstrap.bundle.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+
 <script src="controller/CustomerController.js"></script>
 <script src="controller/ItemController.js"></script>
+<script src="controller/OrderController.js"></script>
+
 <script src="model/CustomerDTO.js"></script>
 <script src="model/ItemDTO.js"></script>
+<script src="model/OrderDTO.js"></script>
+<script src="model/OrderCartDTO.js"></script>
+<script src="model/OrderDetailsDTO.js"></script>
+
 <script src="db/DB.js"></script>
 
 <script>

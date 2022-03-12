@@ -1,6 +1,6 @@
 $("#btnSaveAndUpdate").click(function () {
     saveItem();
-    clearAll();
+    clearAllItems();
     loadAllItems();
 });
 
@@ -20,9 +20,9 @@ function saveItem() {
     itemDB.push(itemObject);
 }
 
-function searchItem(code) {
+function searchItem(id) {
     for (let i = 0; i < itemDB.length; i++) {
-        if (itemDB[i].code == code) {
+        if (itemDB[i].code == id) {
             return itemDB[i];
         }
     }
@@ -44,7 +44,7 @@ function loadAllItems() {
     }
 }
 
-function clearAll() {
+function clearAllItems() {
     $('#txtCode,#txtItemName,#txtQuantity,#txtPrice').val("");
     $('#txtCode,#txtItemName,#txtQuantity,#txtPrice').css('border', '2px solid #ced4da');
     $('#txtCode').focus();
@@ -68,8 +68,8 @@ $("#btnsearch").click(function () {
     }
 });
 
-const itemCodeRegEx = /^(I00-)[0-9]{1,3}$/;
-const itemNameRegEx = /^[A-z ]{5,20}$/;
+const itemCodeRegEx = /^(I00)[0-9]{1,3}$/;
+const itemNameRegEx = /^[A-z ]{3,20}$/;
 const itemQuantityRegEx = /^[0-9/A-z. ,]{1,}$/;
 const itemPriceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
@@ -86,7 +86,7 @@ $('#txtCode,#txtItemName,#txtQuantity,#txtPrice').on('blur', function () {
 
 //focusing events
 $("#txtCode").on('keyup', function (eventOb) {
-    setButton();
+    setButtons();
     if (eventOb.key == "Enter") {
         checkIfValid();
     }
@@ -102,21 +102,21 @@ $("#txtCode").on('keyup', function (eventOb) {
 });
 
 $("#txtItemName").on('keyup', function (eventOb) {
-    setButton();
+    setButtons();
     if (eventOb.key == "Enter") {
         checkIfValid();
     }
 });
 
 $("#txtQuantity").on('keyup', function (eventOb) {
-    setButton();
+    setButtons();
     if (eventOb.key == "Enter") {
         checkIfValid();
     }
 });
 
 $("#txtPrice").on('keyup', function (eventOb) {
-    setButton();
+    setButtons();
     if (eventOb.key == "Enter") {
         checkIfValid();
     }
@@ -125,7 +125,7 @@ $("#txtPrice").on('keyup', function (eventOb) {
 
 $("#btnSaveAndUpdate").attr('disabled', true);
 
-function formValid() {
+function Valid() {
     var itemCode = $("#txtCode").val();
     $("#txtCode").css('border', '2px solid green');
     $("#lblItemCode").text("");
@@ -161,7 +161,7 @@ function formValid() {
         }
     } else {
         $("#txtCode").css('border', '2px solid red');
-        $("#lblItemCode").text("Item Code is a required field : Pattern I00-000");
+        $("#lblItemCode").text("Item Code is a required field : Pattern I00");
         return false;
     }
 }
@@ -198,9 +198,9 @@ function checkIfValid() {
     }
 }
 
-function setButton() {
-    let b = formValid();
-    if (b) {
+function setButtons() {
+    let c = Valid();
+    if (c) {
         $("#btnSaveAndUpdate").attr('disabled', false);
     } else {
         $("#btnSaveAndUpdate").attr('disabled', true);

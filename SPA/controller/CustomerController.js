@@ -2,6 +2,39 @@ $("#btnSave").click(function () {
     saveCustomer();
     clearAll();
     loadAllCustomers();
+    updateCustomer();
+    deleteCustomer();
+});
+
+$("#customerDelete").click(function (){
+    var custId= $("#txtSearchCusID").val();
+    for (var i in customerDB){
+        if (custId==customerDB[i].getId()){
+            customerDB.splice(i,1);
+            loadAllCustomers();
+            alert("Customer Delete Complete");
+            break;
+        }
+    }
+
+});
+$("#btnUpdate").click(function () {
+    for (var i in customerDB){
+        if ($("#txtId").val()==customerDB[i].getId()){
+
+            var name=$(" #txtName").val();
+            var tp=$(" #txtTp").val();
+            var salary=$(" #txtSalary").val();
+
+            customerDB[i].setName(name);
+            customerDB[i].setTp(tp);
+            customerDB[i].setSalary(salary);
+
+            loadAllCustomers();
+            alert("Customer Update complete");
+            break;
+        }
+    }
 });
 
 function saveCustomer() {
@@ -11,6 +44,7 @@ function saveCustomer() {
     let customerSalary = $("#txtSalary").val();
 
     //create Object
+
     var customerObject = {
         id: customerID,
         name: customerName,
@@ -22,6 +56,7 @@ function saveCustomer() {
 }
 
 function searchCustomer(id) {
+    $("#btnSave").attr('disabled', true);
     for (let i = 0; i < customerDB.length; i++) {
         if (customerDB[i].id == id) {
             return customerDB[i];
@@ -34,7 +69,15 @@ function deleteCustomer() {
 }
 
 function updateCustomer() {
-    //write the code
+    $("#customerTable>tr").on('dblclick',function (e) {
+        $("#txtId").val($(this).children(':eq(0)').text());
+        $(" #txtId").prop( "disabled", true );
+        $(" #txtName").val($(this).children(':eq(1)').text());
+        $(" #txtTp").val($(this).children(':eq(2)').text());
+        $(" #txtSalary").val($(this).children(':eq(3)').text());
+    });
+    $("#btnSave").attr('disabled', true);
+
 }
 
 function loadAllCustomers() {
@@ -69,8 +112,8 @@ $("#btnSearch").click(function () {
     }
 });
 
-const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
-const cusNameRegEx = /^[A-z ]{5,20}$/;
+const cusIDRegEx = /^(C00)[0-9]{1,3}$/;
+const cusNameRegEx = /^[A-z ]{3,20}$/;
 const cusTpRegEx = /^[0-9/A-z. ,]{7,}$/;
 const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
@@ -89,7 +132,7 @@ $('#txtId,#txtName,#txtTp,#txtSalary').on('blur', function () {
 $("#txtId").on('keyup', function (eventOb) {
     setButton();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkIfValided();
     }
 
     if (eventOb.key == "Control") {
@@ -105,21 +148,21 @@ $("#txtId").on('keyup', function (eventOb) {
 $("#txtName").on('keyup', function (eventOb) {
     setButton();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkIfValided();
     }
 });
 
 $("#txtTp").on('keyup', function (eventOb) {
     setButton();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkIfValided();
     }
 });
 
 $("#txtSalary").on('keyup', function (eventOb) {
     setButton();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkIfValided();
     }
 });
 
@@ -138,10 +181,10 @@ function formValid() {
             var cusTp = $("#txtTp").val();
             if (cusTpRegEx.test(cusTp)) {
                 var cusSalary = $("#txtSalary").val();
-                var resp = cusSalaryRegEx.test(cusSalary);
+                var sly = cusSalaryRegEx.test(cusSalary);
                 $("#txtTp").css('border', '2px solid green');
                 $("#lblcustp").text("");
-                if (resp) {
+                if (sly) {
                     $("#txtSalary").css('border', '2px solid green');
                     $("#lblcussalary").text("");
                     return true;
@@ -162,12 +205,12 @@ function formValid() {
         }
     } else {
         $("#txtId").css('border', '2px solid red');
-        $("#lblcusid").text("Cus ID is a required field : Pattern C00-000");
+        $("#lblcusid").text("Cus ID is a required field : Pattern C00");
         return false;
     }
 }
 
-function checkIfValid() {
+function checkIfValided() {
     var cusID = $("#txtId").val();
     if (cusIDRegEx.test(cusID)) {
         $("#txtName").focus();
@@ -178,10 +221,10 @@ function checkIfValid() {
             if (cusTpRegEx.test(cusTp)) {
                 $("#txtSalary").focus();
                 var cusSalary = $("#txtSalary").val();
-                var resp = cusSalaryRegEx.test(cusSalary);
-                if (resp) {
-                    let res = confirm("Do you really need to add this Customer..?");
-                    if (res) {
+                var sly = cusSalaryRegEx.test(cusSalary);
+                if (sly) {
+                    let con = confirm("Do you really need to add this Customer..?");
+                    if (con) {
                         saveCustomer();
                         clearAll();
                     }
@@ -209,5 +252,5 @@ function setButton() {
 }
 
 $('#btnSave').click(function () {
-    checkIfValid();
+    checkIfValided();
 });
