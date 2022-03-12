@@ -33,10 +33,7 @@ $("#btnAddToTable").click(function () {
     var itemName= $("#txtSelectItemDescription").val();
     var itemPrice= $("#txtSelectItemPrice").val();
     var qty=parseInt( $("#txtQty").val());
-
-    //var itemFinallyPrice= itemPrice-((discount/100)*itemPrice);
     var totalItemPrice=itemPrice*qty;
-
 
     var itemExist=0;
     for(var i in cartItems){
@@ -97,7 +94,7 @@ function keyPress() {
     if (cash==''){
         $("#txtBalance").val('');
     }else{
-        var balance=cash-subTotal;
+        var balance=cash-itemFinallytotal;
         $("#txtBalance").val(balance);
     }
 }

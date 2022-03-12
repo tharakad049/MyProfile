@@ -2,6 +2,38 @@ $("#btnSaveAndUpdate").click(function () {
     saveItem();
     clearAllItems();
     loadAllItems();
+    updateItem();
+    generateItemCode();
+});
+
+function generateItemCode() {
+    if (itemDB.length!=0) {
+        let lastrecord = itemDB[itemDB.length - 1].code;
+        let split = lastrecord.split("-");
+        let splitElement = ++split[1];
+        if (splitElement < 10 && splitElement > 0) {
+            $("#txtCode").val("I00-" + "00" + splitElement);
+        } else if (splitElement > 99) {
+            $("#txtCode").val("I00-" + splitElement);
+        } else {
+            $("#txtCode").val("I00-001");
+        }
+    }else{
+        $("#txtCode").val("I00-001");
+    }
+}
+
+
+$("#itemDelete").click(function (){
+    var itemCode= $("#txtSearchItemCode").val();
+    for (var i in itemDB){
+        if (itemCode==itemDB[i].code){
+            itemDB.splice(i,1);
+            loadAllItems();
+            alert("Item Delete Complete");
+            break;
+        }
+    }
 });
 
 function saveItem() {
@@ -28,12 +60,34 @@ function searchItem(id) {
     }
 }
 
-function deleteItem() {
-    //write the code
-}
+$("#btnUpdated").click(function () {
+    for (var i in itemDB){
+        if ($("#txtCode").val()==itemDB[i].code){
 
-function updateItem() {
-    //write the code
+            var name=$(" #txtItemName").val();
+            var qty=$(" #txtQuantity").val();
+            var price=$(" #txtPrice").val();
+
+            itemDB[i].setName(name);
+            itemDB[i].setQty(qty);
+            itemDB[i].setPrice(price);
+
+            loadAllItems();
+            alert("Item Update complete");
+            break;
+        }
+    }
+});
+
+function updateItem(){
+    $("#itemTable>tr").on('dblclick',function (e) {
+        $("#txtCode").val($(this).children(':eq(0)').text());
+        $(" #txtCode").prop( "disabled", true );
+        $(" #txtItemName").val($(this).children(':eq(1)').text());
+        $(" #txtQuantity").val($(this).children(':eq(2)').text());
+        $(" #txtPrice").val($(this).children(':eq(3)').text());
+    });
+    $("#btnSave").attr('disabled', true);
 }
 
 function loadAllItems() {

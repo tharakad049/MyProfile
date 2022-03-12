@@ -3,16 +3,35 @@ $("#btnSave").click(function () {
     clearAll();
     loadAllCustomers();
     updateCustomer();
-    deleteCustomer();
+    generateCustomerId();
 });
+
+function generateCustomerId() {
+    if (customerDB.length!=0) {
+        let lastrecord = customerDB[customerDB.length - 1].id;
+        let split = lastrecord.split("-");
+        let splitElement = ++split[1];
+        if (splitElement < 10 && splitElement > 0) {
+            $("#txtId").val("C00-" + "00" + splitElement);
+        } else if (splitElement > 99) {
+            $("#txtId").val("C00-" + splitElement);
+
+        } else {
+            $("#txtId").val("C00-001");
+        }
+    }else{
+        $("#txtId").val("C00-001");
+    }
+}
 
 $("#customerDelete").click(function (){
     var custId= $("#txtSearchCusID").val();
     for (var i in customerDB){
-        if (custId==customerDB[i].getId()){
+        if (custId==customerDB[i].id){
             customerDB.splice(i,1);
             loadAllCustomers();
             alert("Customer Delete Complete");
+            clearAll();
             break;
         }
     }
@@ -20,7 +39,7 @@ $("#customerDelete").click(function (){
 });
 $("#btnUpdate").click(function () {
     for (var i in customerDB){
-        if ($("#txtId").val()==customerDB[i].getId()){
+        if ($("#txtId").val()==customerDB[i].id){
 
             var name=$(" #txtName").val();
             var tp=$(" #txtTp").val();
@@ -42,7 +61,7 @@ function saveCustomer() {
     let customerName = $("#txtName").val();
     let customerTp = $("#txtTp").val();
     let customerSalary = $("#txtSalary").val();
-
+    generateCustomerId();
     //create Object
 
     var customerObject = {
@@ -62,10 +81,6 @@ function searchCustomer(id) {
             return customerDB[i];
         }
     }
-}
-
-function deleteCustomer() {
-    //write the code
 }
 
 function updateCustomer() {
@@ -112,7 +127,7 @@ $("#btnSearch").click(function () {
     }
 });
 
-const cusIDRegEx = /^(C00)[0-9]{1,3}$/;
+const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
 const cusNameRegEx = /^[A-z ]{3,20}$/;
 const cusTpRegEx = /^[0-9/A-z. ,]{7,}$/;
 const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
